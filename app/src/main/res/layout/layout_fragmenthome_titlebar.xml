@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_menu"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@android:color/transparent"
+    android:paddingLeft="@dimen/size_20"
+    android:paddingRight="@dimen/size_20">
+
+    <ImageView
+        android:id="@+id/iv_fragmenthome_titlebar_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_qrcode" />
+
+    <ImageView
+        android:id="@+id/iv_fragmenthome_titlebar_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/iv_fragmenthome_titlebar_qrcode"
+        android:src="@drawable/ic_region" />
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_titlebar_region"
+        style="@style/text_white_14"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_fragmenthome_titlebar_region"
+        android:layout_marginLeft="2dp"
+        android:text="南通" />
+
+    <ImageView
+        android:id="@+id/iv_fragmenthome_titlebar_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/message_round_default" />
+
+    <RelativeLayout
+        android:id="@+id/rl_fragmenthome_titlebar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/iv_fragmenthome_titlebar_message"
+        android:layout_toRightOf="@id/tv_fragmenthome_titlebar_region">
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_titlebar_searchline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/icon_searchline"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_titlebar_searchicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_above="@id/iv_fragmenthome_titlebar_searchline"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/search_white" />
+
+        <TextView
+            style="@style/text_white_14"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/iv_fragmenthome_titlebar_searchline"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/iv_fragmenthome_titlebar_searchicon"
+            android:text="搜索商品" />
+    </RelativeLayout>
+</RelativeLayout>

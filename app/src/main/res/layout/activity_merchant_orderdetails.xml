@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jwenfeng.library.pulltorefresh.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prl_activity_merchantorder_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGray_2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15"
+                android:background="@color/colorWrite">
+
+                <TextView
+                    android:id="@+id/tv_activity_merchantorderdetails_infomation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_10"
+                    android:text="订单信息"
+                    android:lineSpacingExtra="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"></TextView>
+
+                <View
+                    android:id="@+id/view_activity_merchantorderdetails_line_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0.3"
+                    android:layout_below="@id/tv_activity_merchantorderdetails_infomation"
+                    android:background="@color/colorGray" />
+
+                <TextView
+                    android:id="@+id/tv_activity_merchantorderdetails_surplusmoney_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/view_activity_merchantorderdetails_line_one"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:text="@string/amount_pay_"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_activity_merchantorderdetails_surplusmoney_rmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_activity_merchantorderdetails_surplusmoney_title"
+                    android:layout_toEndOf="@+id/tv_activity_merchantorderdetails_surplusmoney_title"
+                    android:layout_toRightOf="@+id/tv_activity_merchantorderdetails_surplusmoney_title"
+                    android:text="@string/rmb"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_activity_merchantorderdetails_surplusmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="14sp"
+                    android:layout_alignBaseline="@+id/tv_activity_merchantorderdetails_surplusmoney_rmb"
+                    android:layout_alignBottom="@+id/tv_activity_merchantorderdetails_surplusmoney_rmb"
+                    android:layout_toRightOf="@+id/tv_activity_merchantorderdetails_surplusmoney_rmb"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@+id/tv_activity_merchantorderdetails_surplusmoney_rmb" />
+
+                <TextView
+                    android:id="@+id/tv_activity_merchantorderdetails_orderstatus_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_activity_merchantorderdetails_surplusmoney_title"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/order_status_"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_activity_merchantorderdetails_orderstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_activity_merchantorderdetails_orderstatus_title"
+                    android:layout_toEndOf="@+id/tv_activity_merchantorderdetails_orderstatus_title"
+                    android:layout_toRightOf="@+id/tv_activity_merchantorderdetails_orderstatus_title"
+                    android:text="待付款"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_activity_merchantorderdetails_commoditylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15"
+                android:background="@color/colorWrite"
+                android:padding="@dimen/size_10"
+                android:text="@string/commodity_list"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size_text_14" />
+
+            <View
+                android:id="@+id/view_activity_merchantorderdetails_line_three"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0.3"
+                android:background="@color/colorGray" />
+
+            <com.yundian.wudou.customview.ListView
+                android:id="@+id/lv_activity_merchantorderdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorGray"
+                android:dividerHeight="0.3dp"
+                android:background="@color/colorWrite"></com.yundian.wudou.customview.ListView>
+        </LinearLayout>
+    </ScrollView>
+</com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>

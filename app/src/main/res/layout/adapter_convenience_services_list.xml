@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/size_10">
+
+    <ImageView
+        android:id="@+id/iv_adapter_convenience_service_goodsimage"
+        android:layout_width="@dimen/size_80"
+        android:layout_height="@dimen/size_60"
+        android:scaleType="fitXY"
+        android:src="@color/colorGreenAfter"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_convenience_service_goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_5"
+        android:layout_toRightOf="@+id/iv_adapter_convenience_service_goodsimage"
+        android:text="守望先锋守望先锋守望先锋守望先锋守望先锋"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_15"
+        android:singleLine="true"/>
+
+
+    <TextView
+        android:id="@+id/tv_adapter_convenience_service_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_adapter_convenience_service_goodsname"
+        android:layout_alignLeft="@+id/tv_adapter_convenience_service_goodsname"
+        android:layout_marginTop="@dimen/size_5"
+        android:layout_toEndOf="@+id/iv_adapter_convenience_service_goodsimage"
+        android:layout_toRightOf="@+id/iv_adapter_convenience_service_goodsimage"
+        android:text="如东县"
+        android:textColor="@color/colorGray"
+        />
+
+    <TextView
+        android:id="@+id/tv_adapter_convenience_service_pubdate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_adapter_convenience_service_location"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_toRightOf="@+id/tv_adapter_convenience_service_location"
+        android:text="发布于:"
+        android:textColor="@color/colorGray"
+        />
+
+    <TextView
+        android:id="@+id/tv_adapter_convenience_service_pubdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_adapter_convenience_service_pubdate_title"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_toRightOf="@+id/tv_adapter_convenience_service_pubdate_title"
+        android:text="5.21"
+        android:textColor="@color/colorGray"
+        />
+
+
+
+
+
+</RelativeLayout>

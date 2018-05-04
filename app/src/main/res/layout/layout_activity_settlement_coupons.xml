@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_activity_settlement_coupons"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/size_10"
+    android:paddingBottom="@dimen/size_5"
+    android:paddingTop="@dimen/size_5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coupons"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_15"
+        android:id="@+id/tv_activity_settlement_coupons"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:id="@+id/iv_activity_settlement_coupons_go"
+        android:src="@drawable/go_before"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:background="@color/colorWrite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/cb_activity_secondcommoditydetails"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_180"
+                app:canLoop="true"></com.bigkoo.convenientbanner.ConvenientBanner>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/size_10">
+
+                <TextView
+                    android:id="@+id/tv_activity_secondcommoditydetails_goods_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品名称"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_text_15" />
+
+                <TextView
+                    android:id="@+id/tv_activity_secondcommoditydetails_icon_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="商家"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_activity_secondcommoditydetails_goods_rmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_activity_secondcommoditydetails_goods_name"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:gravity="center"
+                    android:text="¥"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_activity_secondcommoditydetails_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_activity_secondcommoditydetails_goods_rmb"
+                    android:layout_marginLeft="@dimen/size_5"
+                    android:layout_toRightOf="@+id/tv_activity_secondcommoditydetails_goods_rmb"
+                    android:text="500.00"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="@dimen/size_text_15" />
+
+                <TextView
+                    android:id="@+id/tv_activity_secondcommoditydetails_goods_timetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_activity_secondcommoditydetails_goods_rmb"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:text="发布时间："
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_activity_secondcommoditydetails_goods_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_activity_secondcommoditydetails_goods_timetitle"
+                    android:layout_toRightOf="@+id/tv_activity_secondcommoditydetails_goods_timetitle"
+                    android:text="00:00:00"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorGray_2" />
+
+            <WebView
+                android:id="@+id/wv_activity_secondcommoditydetails_goods_describe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></WebView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/adapter_linkman" />
+</FrameLayout>
+
+

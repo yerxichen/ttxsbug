@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:padding="@dimen/size_10">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_120"
+        android:layout_weight="1"
+        android:padding="@dimen/size_15"
+        android:background="@drawable/shape_coupons_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兑换码：QG879786"
+            android:textColor="@color/colorWrite"
+            android:id="@+id/tv_adapter_coupons_code"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥10:00"
+            android:textColor="@color/colorWrite"
+            android:textSize="@dimen/size_text_18"
+            android:id="@+id/tv_adapter_coupons_price"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/tv_adapter_coupons_condition"
+            android:layout_alignStart="@+id/tv_adapter_coupons_condition"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="满100元可使用"
+            android:textColor="@color/colorWrite"
+            android:id="@+id/tv_adapter_coupons_condition"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/size_10"
+        android:layout_height="@dimen/size_120"
+        android:src="@drawable/background_coupons_middle"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_120"
+        android:padding="@dimen/size_15"
+        android:background="@drawable/shape_coupons_right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用期限"
+            android:textColor="@color/colorWrite"
+            android:id="@+id/tv_adapter_coupons_datatitle"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016/05/07"
+            android:textColor="@color/colorWrite"
+            android:id="@+id/tv_adapter_coupons_datastart"
+            android:layout_below="@+id/tv_adapter_coupons_datatitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016/06/07"
+            android:textColor="@color/colorWrite"
+            android:layout_marginTop="@dimen/size_5"
+            android:id="@+id/tv_adapter_coupons_dataend"
+            android:layout_below="@+id/tv_adapter_coupons_datastart"
+            android:layout_alignLeft="@+id/tv_adapter_coupons_datastart"
+            android:layout_alignStart="@+id/tv_adapter_coupons_datastart"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未使用"
+            android:textColor="@color/colorWrite"
+            android:textSize="@dimen/size_text_17"
+            android:id="@+id/tv_adapter_coupons_status"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/tv_adapter_coupons_datatitle"
+            android:layout_alignEnd="@+id/tv_adapter_coupons_datatitle"/>
+    </RelativeLayout>
+</LinearLayout>

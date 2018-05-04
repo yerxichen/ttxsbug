@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_adapter_mysecondhand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_10">
+
+        <ImageView
+            android:id="@+id/iv_adapter_mysecondhand"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="@dimen/size_70"
+            android:scaleType="fitXY"
+            android:src="@color/colorGreenAfter" />
+
+        <TextView
+            android:id="@+id/tv_adapter_mysecondhand_name"
+            style="@style/text_black_15"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_toRightOf="@id/iv_adapter_mysecondhand"
+            android:singleLine="true"
+            android:text="二手品名称" />
+
+        <TextView
+            android:id="@+id/tv_adapter_mysecondhand_reviewedsate"
+            style="@style/text_black_14"
+            android:layout_alignParentRight="true"
+            android:text="未审核"
+            android:textColor="@color/colorGray"/>
+
+        <TextView
+            android:id="@+id/tv_adapter_mysecondhand_region"
+            style="@style/text_black_14"
+            android:layout_alignLeft="@+id/tv_adapter_mysecondhand_name"
+            android:layout_centerVertical="true"
+            android:text="区域"
+            android:textColor="@color/colorGray"/>
+
+        <TextView
+            android:id="@+id/tv_adapter_mysecondhand_time"
+            style="@style/text_black_14"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_toRightOf="@+id/tv_adapter_mysecondhand_region"
+            android:text="发布时间 : 00:00:00"
+            android:textColor="@color/colorGray"/>
+
+        <TextView
+            android:id="@+id/tv_adapter_mysecondhand_shopprice"
+            style="@style/text_orange_14"
+            android:layout_alignBottom="@id/iv_adapter_mysecondhand"
+            android:layout_alignLeft="@id/tv_adapter_mysecondhand_name"
+            android:text="¥ 0.00" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_adapter_mysecondhand_delete"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/rl_adapter_mysecondhand"
+        android:layout_alignTop="@id/rl_adapter_mysecondhand"
+        android:layout_alignBottom="@id/rl_adapter_mysecondhand"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_light"/>
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_5">
+
+    <CheckBox
+        android:id="@+id/cb_adapter_fragmentshoppingcart_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:focusable="false"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/CustomCheckBoxTheme"/>
+
+    <ImageView
+        android:id="@+id/iv_adapter_fragmentshoppingcart_goods"
+        android:layout_width="@dimen/size_60"
+        android:layout_height="@dimen/size_60"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/test_sale_default"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/cb_adapter_fragmentshoppingcart_goods"
+        android:layout_toEndOf="@+id/cb_adapter_fragmentshoppingcart_goods"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_fragmentshoppingcart_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:text="安第斯阳光酒园 特选赤霞珠干葡萄酒"
+        android:layout_alignTop="@+id/iv_adapter_fragmentshoppingcart_goods"
+        android:layout_toRightOf="@+id/iv_adapter_fragmentshoppingcart_goods"
+        android:layout_toEndOf="@+id/iv_adapter_fragmentshoppingcart_goods"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_fragmentshoppingcart_goods_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:gravity="center"
+        android:text="@string/rmb"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/size_text_14"
+        android:layout_alignBottom="@+id/iv_adapter_fragmentshoppingcart_goods"
+        android:layout_alignLeft="@+id/tv_adapter_fragmentshoppingcart_goods"
+        android:layout_alignStart="@+id/tv_adapter_fragmentshoppingcart_goods"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_fragmentshoppingcart_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:gravity="center"
+        android:text="35"
+        android:textSize="@dimen/size_text_14"
+        android:textColor="@color/colorOrange"
+        android:layout_marginLeft="@dimen/size_5"
+        android:layout_alignTop="@+id/tv_adapter_fragmentshoppingcart_goods_rmb"
+        android:layout_toRightOf="@+id/tv_adapter_fragmentshoppingcart_goods_rmb"
+        android:layout_toEndOf="@+id/tv_adapter_fragmentshoppingcart_goods_rmb"/>
+
+    <ImageView
+        android:id="@+id/iv_adapter_fragmentshoppingcart_goods_reduce"
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:src="@drawable/icon_reduce"
+        android:layout_alignBottom="@+id/tv_adapter_fragmentshoppingcart_goods_count"
+        android:layout_toLeftOf="@+id/tv_adapter_fragmentshoppingcart_goods_count"
+        android:layout_toStartOf="@+id/tv_adapter_fragmentshoppingcart_goods_count"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_fragmentshoppingcart_goods_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:gravity="center"
+        android:paddingLeft="@dimen/size_10"
+        android:paddingRight="@dimen/size_10"
+        android:text="1"
+        android:layout_alignBottom="@+id/iv_adapter_fragmentshoppingcart_goods_add"
+        android:layout_toLeftOf="@+id/iv_adapter_fragmentshoppingcart_goods_add"
+        android:layout_toStartOf="@+id/iv_adapter_fragmentshoppingcart_goods_add"/>
+
+    <ImageView
+        android:id="@+id/iv_adapter_fragmentshoppingcart_goods_add"
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:src="@drawable/icon_add"
+        android:layout_alignTop="@+id/tv_adapter_fragmentshoppingcart_goods_price"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

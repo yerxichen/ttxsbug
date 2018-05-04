@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:padding="@dimen/size_10">
+
+    <TextView
+        android:id="@+id/tv_adapter_activitystoredetils_bottom_goods"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="西班牙橙约600g/份"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"/>
+
+    <ImageView
+        android:id="@+id/iv_adapter_activitystoredetils_bottom_goods_add"
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_add" />
+
+    <TextView
+        android:id="@+id/tv_adapter_activitystoredetils_bottom_goods_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:layout_toLeftOf="@id/iv_adapter_activitystoredetils_bottom_goods_add"
+        android:paddingLeft="@dimen/size_10"
+        android:paddingRight="@dimen/size_10"
+        android:text="0" />
+
+    <ImageView
+        android:id="@+id/iv_adapter_activitystoredetils_bottom_goods_reduce"
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:layout_toLeftOf="@id/tv_adapter_activitystoredetils_bottom_goods_count"
+        android:src="@drawable/icon_reduce" />
+
+    <TextView
+        android:id="@+id/tv_adapter_activitystoredetils_bottom_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/iv_adapter_activitystoredetils_bottom_goods_reduce"
+        android:text="0.00"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/size_text_14" />
+
+    <TextView
+        android:id="@+id/tv_adapter_activitystoredetils_bottom_goods_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:layout_toLeftOf="@id/tv_adapter_activitystoredetils_bottom_goods_price"
+        android:text="@string/rmb"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/size_text_15" />
+
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray_2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_action_bar"
+        android:background="@color/colorGreenBefore">
+
+        <TextView
+            android:id="@+id/tv_fragmentshoppingcart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_action_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/shopping_cart"
+            android:textColor="@color/colorWrite"
+            android:textSize="@dimen/size_text_15" />
+
+        <TextView
+            android:id="@+id/tv_fragmentshoppingcart_delete_selected"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_15"
+            android:background="@drawable/icon_delete_write"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWrite">
+
+        <ListView
+            android:id="@+id/lv_fragmentshoppingcart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#F5F5F5"
+            android:dividerHeight="10dp"
+            android:fastScrollEnabled="false"
+            android:scrollbars="none" />
+
+        <RelativeLayout
+            android:id="@+id/rl_fragment_shoppingcart_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_fragment_shoppingcart_nodata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_nodata" />
+
+            <TextView
+                android:id="@+id/tv_fragment_shoppingcart_nodata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_fragment_shoppingcart_nodata"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:text="暂无数据"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/divider_height_one" />
+
+    <!--<include layout="@layout/layout_shoppingcart_settlement" />-->
+
+</LinearLayout>

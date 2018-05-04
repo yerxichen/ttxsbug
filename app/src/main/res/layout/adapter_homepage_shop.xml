@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_12">
+
+        <TextView
+            android:id="@+id/tv_fragmenthome_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/ly_bg_shop"
+            android:layout_toRightOf="@+id/ly_bg_shop"
+            android:text="@string/store_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_13" />
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_shop_expert"
+            android:layout_width="45dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_t"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_fragmenthome_shop_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/iv_fragmenthome_shop_expert"
+            android:layout_centerVertical="true"
+            android:text="0.0公里"
+            android:textColor="@color/colorOrange"
+            android:textSize="@dimen/size_13" />
+
+        <LinearLayout
+            android:id="@+id/ly_fragmenthome_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_fragmenthome_shop_name"
+            android:layout_alignStart="@+id/tv_fragmenthome_shop_name"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/tv_fragmenthome_shop_rating_bar"
+                style="@style/MyHomeRatingBar"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="15dp"
+                android:layout_marginRight="5dp"
+                android:numStars="5"
+                android:stepSize="0.5" />
+            <!--   style="?android:attr/ratingBarStyleSmall"  -->
+
+            <TextView
+                android:id="@+id/tv_star_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="0dip"
+                android:background="@drawable/my_home_ratingbar_off"
+                android:text=""
+                android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/tv_star_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="2dip"
+                    android:background="@drawable/my_home_ratingbar_off"
+                    android:text=""
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/tv_star_3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="2dip"
+                    android:background="@drawable/my_home_ratingbar_off"
+                    android:text=""
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/tv_star_4"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="2dip"
+                    android:background="@drawable/my_home_ratingbar_off"
+                    android:text=""
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/tv_star_5"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="2dip"
+                    android:background="@drawable/my_home_ratingbar_off"
+                    android:text=""
+                    android:textColor="@color/colorBlack" />
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="10dp"
+                android:layout_alignRight="@+id/tv_fragmenthome_shop_rating_bar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorWrite">
+
+            </View>
+
+            <TextView
+                android:id="@+id/tv_fragmenthome_shop_count"
+                style="@style/text_black_13"
+                android:layout_below="@+id/iv_fragmenthome_shop_expert"
+                android:layout_toLeftOf="@+id/tv_fragmenthome_shop_sendprice"
+                android:layout_toStartOf="@+id/tv_fragmenthome_shop_sendprice"
+                android:text="月售0份" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_fragmenthome_shop_startsend_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ly_bg_shop"
+            android:layout_alignLeft="@+id/ly_fragmenthome_shop_name"
+            android:layout_alignStart="@+id/ly_fragmenthome_shop_name"
+            android:text="@string/startsend"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_13" />
+
+        <TextView
+            android:id="@+id/tv_fragmenthome_shop_startprice"
+            style="@style/text_orange_13"
+            android:layout_alignTop="@+id/tv_fragmenthome_shop_startsend_text"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_toEndOf="@+id/tv_fragmenthome_shop_startsend_text"
+            android:layout_toRightOf="@+id/tv_fragmenthome_shop_startsend_text"
+            android:text="¥ 0" />
+
+        <TextView
+            android:id="@+id/tv_fragmenthome_shop_send"
+            style="@style/text_black_13"
+            android:layout_alignTop="@+id/tv_fragmenthome_shop_startprice"
+            android:layout_marginLeft="@dimen/size_30"
+            android:layout_toEndOf="@+id/tv_fragmenthome_shop_startprice"
+            android:layout_toRightOf="@+id/tv_fragmenthome_shop_startprice"
+            android:text="@string/send" />
+
+        <TextView
+            android:id="@+id/tv_fragmenthome_shop_sendprice"
+            style="@style/text_orange_13"
+            android:layout_alignTop="@+id/tv_fragmenthome_shop_send"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_toEndOf="@+id/tv_fragmenthome_shop_send"
+            android:layout_toRightOf="@+id/tv_fragmenthome_shop_send"
+            android:text="¥ 0" />
+
+        <LinearLayout
+            android:id="@+id/ly_bg_shop"
+            android:layout_width="95dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shop_bg_line"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_fragmenthome_shop"
+                style="@style/imageview_store"
+                android:padding="@dimen/size_2" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shop_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ly_bg_shop1"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shop_bg_line"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_fragmenthome_shop1"
+                style="@style/imageview_store"
+                android:padding="@dimen/size_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/ly_bg_shop1"
+            android:layout_toRightOf="@+id/ly_bg_shop1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/restaurant_list_item_promotion_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3.0dip"
+                android:layout_marginTop="4.0dip"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/das_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lins_shop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:id="@+id/restaurant_promotion_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="@dimen/size_2"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/yh" />
+
+                    <LinearLayout
+                        android:id="@+id/restaurant_list_item_present_promotion_container"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/restaurant_icon"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBottom="@+id/restaurant_promotion_icon"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+
+                        android:button="@drawable/home_shop_checkbox_style"
+                        android:checked="false"
+                        android:focusable="false"
+                        android:gravity="center" />
+                    <!--</LinearLayout>-->
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_shop_rx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:orientation="vertical">
+
+                    <com.yundian.wudou.utils.HorizontalListView
+                        android:id="@+id/gv_adapter_homepage_shop"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/colorWrite"
+                        android:focusable="false"
+                        android:listSelector="#00000000"
+                        android:scrollbars="none">
+
+                    </com.yundian.wudou.utils.HorizontalListView>
+
+                    <!--<GridLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:columnCount="1">-->
+
+                    <!--<GridView-->
+                    <!--android:id="@+id/gv_adapter_homepage_shop"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:cacheColorHint="#00000000"-->
+                    <!--android:clickable="false"-->
+                    <!--android:focusable="false"-->
+                    <!--android:focusableInTouchMode="false"-->
+                    <!--android:listSelector="#00000000"-->
+                    <!--android:numColumns="4"-->
+                    <!--android:scrollbars="none"></GridView>-->
+                    <!--</GridLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

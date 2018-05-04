@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_activity_store_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_5">
+
+        <Button
+            android:id="@+id/btn_store_left"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_30"
+            android:background="@drawable/background_button_store_left"
+            android:enabled="false"
+            android:gravity="center"
+            android:textColor="@color/colorWrite" />
+
+        <Button
+            android:id="@+id/btn_store_right"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_30"
+            android:background="@drawable/background_button_store_right"
+            android:textColor="@color/colorGreenBefore" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_activity_store_line_one"
+        style="@style/divider_height_one"
+        android:layout_below="@id/ll_activity_store_one" />
+
+    <LinearLayout
+        android:id="@+id/ll_activity_store_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_activity_store_line_one"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_activity_store_class"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:dropDownVerticalOffset="40dp"
+            android:dropDownWidth="90dp"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="@dimen/size_0.3"
+            android:layout_height="@dimen/size_25"
+            android:layout_margin="@dimen/size_7"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@color/colorGray" />
+
+        <Spinner
+            android:id="@+id/spinner_activity_store_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:dropDownVerticalOffset="40dp"
+            android:dropDownWidth="90dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_activity_store_line_two"
+        style="@style/divider_height_one"
+        android:layout_below="@id/ll_activity_store_two" />
+
+    <com.jwenfeng.library.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/prl_activity_store"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_activity_store_line_two">
+
+        <ListView
+            android:id="@+id/lv_activity_store"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1px"
+            android:divider="@color/colorGray_2"/>
+    </com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>
+</RelativeLayout>

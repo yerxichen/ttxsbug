@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/iv_adapter_classificationright_recycleview"
+        style="@style/imageview_product"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_classificationleft_recycleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_adapter_classificationright_recycleview"
+        android:layout_marginTop="@dimen/size_10"
+        android:singleLine="true"
+        android:text="水果"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_14" />
+</RelativeLayout>

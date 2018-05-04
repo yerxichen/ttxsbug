@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/colorWrite">
+
+    <TextView
+        android:id="@+id/btn_act_commoditydetail_settlement"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="100dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="差¥0.00起送"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:background="@color/colorGray_divider"/>
+
+    <TextView
+        android:id="@+id/btn_act_commoditydetail_toshopcart"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="80dp"
+        android:layout_toLeftOf="@id/btn_act_commoditydetail_settlement"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="去购物车"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:background="@color/colorGray_divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/btn_act_commoditydetail_toshopcart">
+
+        <RelativeLayout
+            android:id="@+id/rl_act_commoditydetail_shopcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_activity_commoditydetails_shopcart"
+                android:layout_width="@dimen/size_35"
+                android:layout_height="@dimen/size_35"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopcart_default" />
+
+            <TextView
+                android:id="@+id/tv_activity_commoditydetails_totalcount"
+                android:layout_width="@dimen/size_16"
+                android:layout_height="@dimen/size_16"
+                android:layout_alignRight="@id/iv_activity_commoditydetails_shopcart"
+                android:background="@drawable/background_cycle_green"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/colorWrite"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_act_commoditydetail_divider"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/rl_act_commoditydetail_shopcart"
+            android:layout_alignTop="@id/rl_act_commoditydetail_shopcart"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_toRightOf="@id/rl_act_commoditydetail_shopcart"
+            android:background="@color/colorGray_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/view_act_commoditydetail_divider">
+
+            <TextView
+                android:id="@+id/tv_act_commoditydetail_message_line_one"
+                style="@style/text_black_14"
+                android:text="合计:"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:id="@+id/tv_activitycommoditydetails_message_line_two"
+                style="@style/text_black_14"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp"
+                android:text="(不含配送费)" />
+
+            <TextView
+                android:id="@+id/tv_activity_commoditydetails_totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/tv_act_commoditydetail_message_line_one"
+                android:layout_alignBottom="@id/tv_act_commoditydetail_message_line_one"
+                android:text="¥ 0.00"
+                android:textColor="@color/colorOrange"
+                android:textSize="@dimen/size_text_14" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_12">
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_shop_name"
+        style="@style/text_black_13"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_toEndOf="@+id/iv_fragmenthome_shop"
+        android:layout_toRightOf="@+id/iv_fragmenthome_shop"
+        android:text="@string/store_name" />
+
+    <ImageView
+        android:id="@+id/iv_fragmenthome_shop_expert"
+        android:layout_width="45dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_expert" />
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_shop_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/iv_fragmenthome_shop_expert"
+        android:layout_centerVertical="true"
+        android:text="0.0公里"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/size_13" />
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_shop_count"
+        style="@style/text_black_13"
+        android:layout_alignLeft="@+id/tv_fragmenthome_shop_name"
+        android:layout_alignStart="@+id/tv_fragmenthome_shop_name"
+        android:layout_centerVertical="true"
+        android:text="月售0份" />
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_shop_startsend_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_fragmenthome_shop"
+        android:layout_alignLeft="@+id/tv_fragmenthome_shop_count"
+        android:layout_alignStart="@+id/tv_fragmenthome_shop_count"
+        android:text="@string/startsend"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_13" />
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_shop_startprice"
+        style="@style/text_orange_13"
+        android:layout_alignTop="@+id/tv_fragmenthome_shop_startsend_text"
+        android:layout_marginLeft="@dimen/size_5"
+        android:layout_toEndOf="@+id/tv_fragmenthome_shop_startsend_text"
+        android:layout_toRightOf="@+id/tv_fragmenthome_shop_startsend_text"
+        android:text="¥ 0" />
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_shop_send"
+        style="@style/text_black_13"
+        android:layout_alignTop="@+id/tv_fragmenthome_shop_startprice"
+        android:layout_marginLeft="@dimen/size_30"
+        android:layout_toEndOf="@+id/tv_fragmenthome_shop_startprice"
+        android:layout_toRightOf="@+id/tv_fragmenthome_shop_startprice"
+        android:text="@string/send" />
+
+    <TextView
+        android:id="@+id/tv_fragmenthome_shop_sendprice"
+        style="@style/text_orange_13"
+        android:layout_alignTop="@+id/tv_fragmenthome_shop_send"
+        android:layout_marginLeft="@dimen/size_5"
+        android:layout_toEndOf="@+id/tv_fragmenthome_shop_send"
+        android:layout_toRightOf="@+id/tv_fragmenthome_shop_send"
+        android:text="¥ 0" />
+
+    <ImageView
+        android:id="@+id/iv_fragmenthome_shop"
+        style="@style/imageview_store"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

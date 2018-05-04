@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_activity_storedetails_select"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_35"
+        android:layout_gravity="center"
+        android:background="@color/colorWrite"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_activity_storedetails_left"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_vegetables" />
+
+            <ImageView
+                android:id="@+id/iv_activity_storedetails_right"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_clean_vegetables"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tab_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_activity_storedetails_left"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:text="生鲜区"
+                android:textColor="@color/colorBlackLight"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/tv_activity_storedetails_line"
+                android:layout_width="75dp"
+                android:layout_height="2dp"
+                android:layout_alignEnd="@+id/tab_text"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/tab_text"
+                android:background="@color/colorGreenBefore"
+                android:gravity="center"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

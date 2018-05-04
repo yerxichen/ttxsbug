@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_10">
+
+        <ImageView
+            android:id="@+id/iv_adapter_integralmall_productimage"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="@dimen/size_80"
+            android:scaleType="fitXY"
+            android:src="@color/colorGreenAfter" />
+
+        <TextView
+            android:id="@+id/tv_adapter_integralmall_productname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_toRightOf="@id/iv_adapter_integralmall_productimage"
+            android:singleLine="true"
+            android:text="商品名称"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_15" />
+
+        <TextView
+            android:id="@+id/tv_adapter_integralmall_productcount_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_toRightOf="@+id/iv_adapter_integralmall_productimage"
+            android:text="数量:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_15" />
+
+        <TextView
+            android:id="@+id/tv_adapter_integralmall_productcount_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_toRightOf="@id/tv_adapter_integralmall_productcount_title"
+            android:text="0"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_15" />
+
+        <TextView
+            android:id="@+id/tv_adapter_integralmall_productexchange_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_toRightOf="@id/tv_adapter_integralmall_productcount_content"
+            android:text="已兑换:"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_15" />
+
+        <TextView
+            android:id="@+id/tv_adapter_integralmall_productexchange_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_toRightOf="@+id/tv_adapter_integralmall_productexchange_title"
+            android:text="0"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/tv_adapter_integralmall_productprice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_adapter_integralmall_productimage"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_adapter_integralmall_productimage"
+            android:text="￥"
+            android:textColor="@color/colorOrange"
+            android:textSize="@dimen/size_text_15" />
+
+        <TextView
+            android:id="@+id/tv_adapter_integralmall_productprice_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_adapter_integralmall_productprice_title"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_toRightOf="@id/tv_adapter_integralmall_productprice_title"
+            android:text="0"
+            android:textColor="@color/colorOrange" />
+    </RelativeLayout>
+
+</LinearLayout>

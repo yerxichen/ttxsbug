@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_adapter_classification_left">
+
+    <ImageView
+        android:id="@+id/iv_adapter_classification_left"
+        android:layout_width="@dimen/size_3"
+        android:layout_height="@dimen/size_40"
+        android:src="@color/colorGreenBefore" />
+
+    <TextView
+        android:id="@+id/tv_adapter_classification_left"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_40"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/classification"
+        android:textSize="@dimen/size_text_15" />
+</RelativeLayout>

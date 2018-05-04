@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_15"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_activity_releasegoods_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_35"
+            android:background="@drawable/background_frame"
+            android:hint="标题" />
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_releasegoods_upload"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/background_frame">
+
+            <ImageView
+                android:id="@+id/iv_activity_releasegoods_upload_one"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_60"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_activity_releasegoods_upload_two"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_60"
+                android:layout_toRightOf="@id/iv_activity_releasegoods_upload_one"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_activity_releasegoods_upload_three"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_60"
+                android:layout_toRightOf="@id/iv_activity_releasegoods_upload_two"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_activity_releasegoods_upload_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="上传图片"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_releasegoods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_35"
+            android:layout_below="@+id/rl_activity_releasegoods_upload"
+            android:layout_marginTop="@dimen/size_12">
+
+            <EditText
+                android:id="@+id/et_activity_releasegoods_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_frame"
+                android:hint="价格" />
+
+            <TextView
+                android:id="@+id/tv_activity_releasegoods_rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="元" />
+        </RelativeLayout>
+
+        <Spinner
+            android:id="@+id/sp_activity_releasegoods_region"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/background_frame" />
+
+        <Spinner
+            android:id="@+id/sp_activity_releasegoods_category"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/background_frame" />
+
+        <EditText
+            android:id="@+id/et_activity_releasegoods_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/background_frame"
+            android:hint="联系人" />
+
+        <EditText
+            android:id="@+id/et_activity_releasegoods_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/background_frame"
+            android:hint="电话" />
+
+        <RadioGroup
+            android:id="@+id/rg_activity_releasegoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_12"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton_corporate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/corporate" />
+
+            <RadioButton
+                android:id="@+id/radioButton_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_30"
+                android:text="@string/personal" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_activity_releasegoods_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_150"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/background_frame"
+            android:gravity="left"
+            android:hint="详细介绍"
+            android:paddingLeft="@dimen/size_10"
+            android:paddingTop="@dimen/size_5" />
+
+        <Button
+            android:id="@+id/btn_activity_releasegoods_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_40"
+            android:background="@drawable/background_button_round_green"
+            android:text="@string/release"
+            android:textColor="@color/colorWrite" />
+    </LinearLayout>
+</ScrollView>

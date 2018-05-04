@@ -1,0 +1,178 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorOrange</item>
+    </style>
+
+    <style name="Notitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/myratingbar</item>
+    </style>
+
+    <style name="MyHomeRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/my_home_ratingbar</item>
+    </style>
+
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <!-- ActionSheet进入及退出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+    <!-- 启动页加载-->
+    <style name="Theme.AppStartLoad" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <!--分割线的风格-->
+    <style name="divider_height_one">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">@color/colorGray_divider</item>
+    </style>
+    <!--店铺图片90dp*60dp-->
+    <style name="imageview_store">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@color/colorGreenAfter</item>
+    </style>
+    <!--商品图片60dp*60dp-->
+    <style name="imageview_product">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@color/colorGreenAfter</item>
+    </style>
+    <!--黑色13号字体-->
+    <style name="text_black_13">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_13</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <!--黑色14号字体-->
+    <style name="text_black_14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_14</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <!--黑色15号字体-->
+    <style name="text_black_15">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_15</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <!--白色14号字体-->
+    <style name="text_white_14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_14</item>
+        <item name="android:textColor">@color/colorWrite</item>
+    </style>
+    <!--白色15号字体-->
+    <style name="text_white_15">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_15</item>
+        <item name="android:textColor">@color/colorWrite</item>
+    </style>
+    <!--白色16号字体-->
+    <style name="text_white_16">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_16</item>
+        <item name="android:textColor">@color/colorWrite</item>
+    </style>
+    <!--橙色13号字体-->
+    <style name="text_orange_13">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_13</item>
+        <item name="android:textColor">@color/colorOrange</item>
+    </style>
+    <!--橙色14号字体-->
+    <style name="text_orange_14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_14</item>
+        <item name="android:textColor">@color/colorOrange</item>
+    </style>
+    <!--橙色15号字体-->
+    <style name="text_orange_15">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_text_15</item>
+        <item name="android:textColor">@color/colorOrange</item>
+    </style>
+    <!--分类和店铺详情页面的搜索框-->
+    <style name="edittext_search">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:drawableLeft">@drawable/search_gray</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:background">@drawable/background_edittext</item>
+        <item name="android:textCursorDrawable">@drawable/edittext_cursor</item>
+    </style>
+    <!--自定义的CheckBox风格-->
+    <style name="CustomCheckBoxTheme" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <style name="cut_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">没什么可送的了就是来凑行数的</item>
+        <item name="android:textColor">@color/gray_hint</item>
+    </style>
+
+    <style name="badge_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">14dp</item>
+        <item name="android:minWidth">14dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:textColor">@color/colorWrite</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/badge_bg</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+</resources>

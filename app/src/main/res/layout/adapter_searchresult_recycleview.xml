@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/size_10"
+    android:paddingRight="@dimen/size_10"
+    android:paddingTop="@dimen/size_10">
+
+    <ImageView
+        android:id="@+id/iv_adapter_searchresult_recycleview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/test_sale_default" />
+
+    <TextView
+        android:id="@+id/tv_adapter_searchresult_recycleview_title"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/iv_adapter_searchresult_recycleview"
+        android:layout_marginTop="@dimen/size_5"
+        android:text="产品名称"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_13" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_adapter_searchresult_recycleview_title"
+        android:layout_marginTop="@dimen/size_5"
+        android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/tv_adapter_searchresult_recycleview_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rmb"
+        android:textColor="@color/colorOrange" />
+
+    <TextView
+        android:id="@+id/tv_adapter_searchresult_recycleview_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_adapter_searchresult_recycleview_rmb"
+        android:layout_marginLeft="@dimen/size_5"
+        android:text="0.00"
+        android:textColor="@color/colorOrange" />
+    </RelativeLayout>
+</RelativeLayout>

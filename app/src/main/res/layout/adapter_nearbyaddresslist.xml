@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/size_10">
+
+    <ImageView
+        android:id="@+id/iv_adapter_nearbyaddresslist"
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:src="@drawable/icon_position" />
+
+    <TextView
+        android:id="@+id/tv_adapter_nearbyaddresslist_locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size_5"
+        android:layout_toRightOf="@id/iv_adapter_nearbyaddresslist"
+        android:text="万达广场东坊"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_16" />
+
+    <TextView
+        android:id="@+id/tv_adapter_nearbyaddresslist_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_adapter_nearbyaddresslist_locate"
+        android:layout_marginLeft="@dimen/size_5"
+        android:layout_toEndOf="@+id/tv_adapter_nearbyaddresslist_locate"
+        android:layout_toRightOf="@+id/tv_adapter_nearbyaddresslist_locate"
+        android:background="@color/colorGreenBefore"
+        android:paddingBottom="@dimen/size_1"
+        android:paddingLeft="@dimen/size_5"
+        android:paddingRight="@dimen/size_5"
+        android:paddingTop="@dimen/size_1"
+        android:textColor="@color/colorWrite"
+        android:text="@string/recommend" />
+
+    <TextView
+        android:id="@+id/tv_adapter_nearbyaddresslist_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_adapter_nearbyaddresslist_locate"
+        android:layout_alignStart="@+id/tv_adapter_nearbyaddresslist_locate"
+        android:layout_below="@+id/tv_adapter_nearbyaddresslist_locate"
+        android:layout_marginTop="@dimen/size_10"
+        android:text="江苏省南京市建邺区云锦路40号云锦路"
+        android:textSize="@dimen/size_text_15" />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_adapter_mycomment_storename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/product_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_14" />
+
+        <TextView
+            android:id="@+id/tv_adapter_mycomment_commentdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="00.00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_13" />
+    </RelativeLayout>
+
+    <RatingBar
+        android:id="@+id/rb_adapter_mycomment_commentrate"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_adapter_mycomment_storename"
+        android:layout_marginTop="10dp"
+        android:max="5"
+        android:progressTint="@color/colorOrange"
+        android:rating="5" />
+
+    <TextView
+        android:id="@+id/tv_adapter_mycomment_commentcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb_adapter_mycomment_commentrate"
+        android:layout_marginTop="@dimen/size_10"
+        android:text="评价内容"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp" />
+
+    <HorizontalScrollView
+        android:id="@+id/hs_adapter_mycomment_productimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_adapter_mycomment_commentcontent"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_adapter_mycomment_productimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

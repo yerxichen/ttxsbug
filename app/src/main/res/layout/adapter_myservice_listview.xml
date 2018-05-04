@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_adapter_myservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_10">
+
+        <ImageView
+            android:id="@+id/iv_adapter_myservice"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="@dimen/size_60"
+            android:scaleType="fitXY"
+            android:src="@color/colorGreenAfter" />
+
+        <TextView
+            android:id="@+id/tv_adapter_myservice_name"
+            style="@style/text_black_15"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_toRightOf="@id/iv_adapter_myservice"
+            android:singleLine="true"
+            android:text="服务名称" />
+
+        <TextView
+            android:id="@+id/tv_adapter_myservice_reviewedsate"
+            style="@style/text_black_14"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/tv_adapter_myservice_name"
+            android:text="未审核"
+            android:textColor="@color/colorGray"/>
+
+        <TextView
+            android:id="@+id/tv_adapter_myservice_region"
+            style="@style/text_black_14"
+            android:layout_alignLeft="@id/tv_adapter_myservice_name"
+            android:layout_alignBottom="@id/iv_adapter_myservice"
+            android:layout_marginBottom="5dp"
+            android:text="区域"
+            android:textColor="@color/colorGray"/>
+
+        <TextView
+            android:id="@+id/tv_adapter_myservice_time"
+            style="@style/text_black_14"
+            android:layout_alignBottom="@id/tv_adapter_myservice_region"
+            android:layout_toRightOf="@id/tv_adapter_myservice_region"
+            android:layout_marginLeft="20dp"
+            android:text="发布时间 : 00:00:00"
+            android:textColor="@color/colorGray"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_adapter_myservice_delete"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/rl_adapter_myservice"
+        android:layout_alignTop="@id/rl_adapter_myservice"
+        android:layout_toRightOf="@id/rl_adapter_myservice"
+        android:background="@android:color/holo_red_light"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

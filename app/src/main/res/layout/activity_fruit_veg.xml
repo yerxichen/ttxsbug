@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWrite"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGray_2"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_activity_fruit_veg_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_120"
+                android:background="@color/colorGray"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_activity_fruit_veg_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_120"
+                android:scaleType="fitXY"
+                android:background="@color/colorGray" />
+
+            <!--<com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/cb_activity_fruit_veg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_160"
+                app:canLoop="true"></com.bigkoo.convenientbanner.ConvenientBanner>-->
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_activity_fruit_veg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10"
+                android:background="@color/colorWrite"></android.support.v7.widget.RecyclerView>
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_30"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_10"
+                android:text="更多分类>>"
+                android:textColor="@color/colorGreenBefore" />-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_fragmenthome_hotpoint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWrite"
+    android:paddingBottom="@dimen/size_10"
+    android:paddingLeft="@dimen/size_15"
+    android:paddingTop="@dimen/size_10">
+
+    <ImageView
+        android:id="@+id/iv_fragmenthome_hotpoint_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_redian1" />
+
+    <View
+        android:id="@+id/view_fragmenthome_hotpoint_divider"
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_fragmenthome_hotpoint_icon"
+        android:layout_alignTop="@id/iv_fragmenthome_hotpoint_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_fragmenthome_hotpoint_icon"
+        android:background="@color/colorGray_2" />
+
+    <TextSwitcher
+        android:id="@+id/ts_fragmenthome_hotpoint_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_fragmenthome_hotpoint_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/view_fragmenthome_hotpoint_divider"
+        android:inAnimation="@anim/push_up_in"
+        android:outAnimation="@anim/push_up_out" />
+
+    <TextSwitcher
+        android:id="@+id/ts_fragmenthome_hotpoint_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ts_fragmenthome_hotpoint_first"
+        android:layout_below="@id/ts_fragmenthome_hotpoint_first"
+        android:layout_marginTop="8dp"
+        android:inAnimation="@anim/push_up_in"
+        android:outAnimation="@anim/push_up_out" />
+</RelativeLayout>
+
+

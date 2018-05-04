@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_8">
+
+    <ImageView
+        android:id="@+id/iv_adapter_daily_sale_goods"
+        android:layout_width="@dimen/size_70"
+        android:layout_height="@dimen/size_70"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size_5" />
+
+    <TextView
+        android:id="@+id/tv_adapter_daily_sale_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_adapter_daily_sale_goods"
+        android:layout_toRightOf="@+id/iv_adapter_daily_sale_goods"
+        android:layout_marginLeft="@dimen/size_10"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_15" />
+
+    <TextView
+        android:id="@+id/tv_adapter_daily_sale_goods_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:layout_alignBottom="@+id/iv_adapter_daily_sale_goods"
+        android:layout_alignLeft="@+id/tv_adapter_daily_sale_goods_name"
+        android:layout_alignStart="@+id/tv_adapter_daily_sale_goods_name"
+        android:gravity="center"
+        android:text="@string/rmb"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/size_text_15" />
+
+    <TextView
+        android:id="@+id/tv_adapter_daily_sale_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20"
+        android:layout_alignTop="@+id/tv_adapter_daily_sale_goods_rmb"
+        android:layout_marginLeft="@dimen/size_5"
+        android:layout_toEndOf="@id/tv_adapter_daily_sale_goods_rmb"
+        android:layout_toRightOf="@id/tv_adapter_daily_sale_goods_rmb"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/size_text_15" />
+</RelativeLayout>

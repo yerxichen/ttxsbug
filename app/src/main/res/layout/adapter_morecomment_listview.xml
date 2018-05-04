@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_adapter_morecomment_consumername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/user_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_14" />
+
+        <TextView
+            android:id="@+id/tv_adapter_morecomment_commentdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/date"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_13" />
+    </RelativeLayout>
+
+    <RatingBar
+        android:id="@+id/rb_adapter_morecomment_commentrate"
+        style="@style/MyRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:max="5"
+        android:rating="5" />
+
+    <TextView
+        android:id="@+id/tv_adapter_morecomment_commentcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/comment_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp" />
+
+    <HorizontalScrollView
+        android:id="@+id/hs_adapter_morecomment_productimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_adapter_morecomment_productimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"></LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

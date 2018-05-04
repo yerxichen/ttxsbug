@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_layout_linkman_viewcontact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreenBefore"
+        android:gravity="center"
+        android:text="查看联系方式"
+        android:textColor="@color/colorWrite"
+        android:textSize="20sp"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginBottom="@dimen/size_10"
+    android:background="@color/colorWrite"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5dp">
+
+        <CheckBox
+            android:id="@+id/cb_adapter_fragmentshoppingcart_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:checked="false"
+            android:focusable="false"
+            style="@style/CustomCheckBoxTheme"/>
+
+        <TextView
+            android:id="@+id/tv_adapter_fragmentshoppingcart_settlement_title"
+            style="@style/text_black_14"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_toRightOf="@id/cb_adapter_fragmentshoppingcart_all"
+            android:text="@string/total" />
+
+        <TextView
+            android:id="@+id/tv_adapter_fragmentshoppingcart_settlement_rmb"
+            style="@style/text_orange_14"
+            android:layout_alignBottom="@id/tv_adapter_fragmentshoppingcart_settlement_title"
+            android:layout_toRightOf="@id/tv_adapter_fragmentshoppingcart_settlement_title"
+            android:text="@string/rmb" />
+
+        <TextView
+            android:id="@+id/tv_adapter_fragmentshoppingcart_settlement_totle"
+            style="@style/text_orange_14"
+            android:layout_alignBottom="@id/tv_adapter_fragmentshoppingcart_settlement_rmb"
+            android:layout_toRightOf="@+id/tv_adapter_fragmentshoppingcart_settlement_rmb"
+            android:layout_marginLeft="2dp"
+            android:text="0.00" />
+
+        <TextView
+            android:id="@+id/tv_adapter_fragmentshoppingcart_settlement_totle_two"
+            style="@style/text_black_14"
+            android:layout_alignLeft="@id/tv_adapter_fragmentshoppingcart_settlement_title"
+            android:layout_alignParentBottom="true"
+            android:text="不含运费" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_adapter_fragmentshoppingcart_settlement"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_button_green"
+        android:gravity="center"
+        android:text="@string/settlement"
+        android:textColor="@color/colorWrite"
+        android:textSize="@dimen/size_text_14" />
+</LinearLayout>

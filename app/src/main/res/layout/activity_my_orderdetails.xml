@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jwenfeng.library.pulltorefresh.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prl_activity_myallorder_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray_2"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15"
+                android:background="@color/colorWrite">
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_infomation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="10dp"
+                    android:padding="@dimen/size_10"
+                    android:text="订单信息"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"></TextView>
+
+                <View
+                    android:id="@+id/view_activity_myorderdetails_line_one"
+                    style="@style/divider_height_one"
+                    android:layout_below="@id/tv_activity_myorderdetails_infomation" />
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_surplusmoney_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/view_activity_myorderdetails_line_one"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:text="@string/amount_pay_"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_surplusmoney_rmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_activity_myorderdetails_surplusmoney_title"
+                    android:layout_toEndOf="@+id/tv_activity_myorderdetails_surplusmoney_title"
+                    android:layout_toRightOf="@+id/tv_activity_myorderdetails_surplusmoney_title"
+                    android:text="@string/rmb"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_surplusmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_activity_myorderdetails_surplusmoney_rmb"
+                    android:layout_marginLeft="@dimen/size_2"
+                    android:layout_toEndOf="@+id/tv_activity_myorderdetails_surplusmoney_rmb"
+                    android:layout_toRightOf="@+id/tv_activity_myorderdetails_surplusmoney_rmb"
+                    android:text="0.00"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_orderstatus_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tv_activity_myorderdetails_surplusmoney_title"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:text="@string/order_status_"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_orderstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view_activity_myorderdetails_line_two"
+                    android:layout_toEndOf="@+id/tv_activity_myorderdetails_orderstatus_title"
+                    android:layout_toRightOf="@+id/tv_activity_myorderdetails_orderstatus_title"
+                    android:text="待付款"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/view_activity_myorderdetails_line_two"
+                    style="@style/divider_height_one"
+                    android:layout_below="@id/tv_activity_myorderdetails_orderstatus_title"
+                    android:layout_marginTop="@dimen/size_10" />
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view_activity_myorderdetails_line_two"
+                    android:background="@color/colorGreenAfter"
+                    android:paddingBottom="@dimen/size_7"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_15"
+                    android:paddingTop="@dimen/size_7"
+                    android:text="@string/cancle_order"
+                    android:textColor="@color/colorWrite" />
+
+                <TextView
+                    android:id="@+id/tv_activity_myorderdetails_paynow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_activity_myorderdetails_line_two"
+                    android:layout_toLeftOf="@id/tv_activity_myorderdetails_cancle"
+                    android:background="@color/colorGreenBefore"
+                    android:paddingBottom="@dimen/size_7"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_15"
+                    android:paddingTop="@dimen/size_7"
+                    android:text="@string/pay_now"
+                    android:textColor="@color/colorWrite" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_activity_myorderdetails_commoditylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15"
+                android:background="@color/colorWrite"
+                android:padding="@dimen/size_10"
+                android:text="@string/commodity_list"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size_text_14" />
+
+            <View
+                android:id="@+id/view_activity_myorderdetails_line_three"
+                style="@style/divider_height_one" />
+
+            <com.yundian.wudou.customview.ListView
+                android:id="@+id/lv_activity_myorderdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWrite"
+                android:divider="@color/colorGray"
+                android:dividerHeight="0.3dp"></com.yundian.wudou.customview.ListView>
+        </LinearLayout>
+    </ScrollView>
+</com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWrite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/cb_activity_mysecondhandetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_140"
+                android:background="@color/colorWrite"
+                app:canLoop="true"></com.bigkoo.convenientbanner.ConvenientBanner>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_activity_mysecondhanddetail_name"
+                    style="@style/text_black_15"
+                    android:text="二手品名称"/>
+
+                <TextView
+                    android:id="@+id/tv_activity_mysecondhanddetail_sate"
+                    style="@style/text_orange_14"
+                    android:layout_alignParentRight="true"
+                    android:text="商家" />
+
+                <TextView
+                    android:id="@+id/tv_activity_mysecondhanddetail_shopprice"
+                    style="@style/text_orange_14"
+                    android:layout_below="@id/tv_activity_mysecondhanddetail_name"
+                    android:layout_marginTop="5dp"
+                    android:text="¥ 0.00"/>
+
+                <TextView
+                    android:id="@+id/tv_activity_mysecondhanddetail_time"
+                    style="@style/text_black_14"
+                    android:layout_below="@id/tv_activity_mysecondhanddetail_shopprice"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:text="发布时间 : 00:00:00" />
+
+                <TextView
+                    android:id="@+id/tv_activity_mysecondhanddetail_reviewedsate"
+                    style="@style/text_black_14"
+                    android:layout_alignBottom="@id/tv_activity_mysecondhanddetail_time"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@id/tv_activity_mysecondhanddetail_time"
+                    android:text="未审核" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_10"
+                android:background="@color/colorGray_2" />
+
+            <WebView
+                android:id="@+id/wv_activity_mysecondhanddetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

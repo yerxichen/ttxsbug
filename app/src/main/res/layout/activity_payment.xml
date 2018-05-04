@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/colorGreenBefore"
+    tools:context="com.yundian.wudou.activity.PaymentActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_activitypayment_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_action_bar"
+        android:background="@color/colorGreenBefore">
+
+        <TextView
+            android:id="@+id/tv_activitypayment_back"
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/size_10"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_activitypayment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_action_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="支付方式"
+            android:textColor="@color/colorWrite"
+            android:textSize="@dimen/size_text_16" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_activity_payment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWrite"></ListView>
+
+</LinearLayout>

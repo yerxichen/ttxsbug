@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWrite"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/size_5"
+    android:paddingLeft="@dimen/size_15"
+    android:paddingRight="@dimen/size_15"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_vegetables"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_vegetables" />
+
+        <TextView
+            style="@style/text_black_14"
+
+            android:text="@string/vegetables" />
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_snacks"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/menu_snacks"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/text_black_14"
+            android:layout_marginTop="@dimen/size_5"
+            android:text="@string/snacks"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_fruits"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_fruits" />
+
+        <TextView
+            style="@style/text_black_14"
+            android:text="@string/fruits" />
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_furniture"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/menu_furniture"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/text_black_14"
+            android:layout_marginTop="@dimen/size_5"
+            android:text="@string/furniture"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_seasoning"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_seasoning" />
+
+        <TextView
+            style="@style/text_black_14"
+
+            android:text="@string/seasoning" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_market"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_market" />
+
+        <TextView
+            style="@style/text_black_14"
+
+            android:text="@string/market" />
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_secondhand"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/menu_secondhand"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/text_black_14"
+            android:layout_marginTop="@dimen/size_10"
+            android:text="@string/secondhand"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_integral"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_integral" />
+
+        <TextView
+            style="@style/text_black_14"
+            android:text="@string/integral" />
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_service"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_service"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/text_black_14"
+            android:text="@string/service"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_fragmenthome_menu_classify"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/menu_classify"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/text_black_14"
+            android:layout_marginTop="@dimen/size_10"
+            android:text="@string/classify"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_activity_editaddress_line_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_10"
+        android:background="@color/colorGray_2" />
+
+    <TextView
+        android:id="@+id/tv_activity_editaddress_addresstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_activity_editaddress_line_one"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_10"
+        android:gravity="center_vertical"
+        android:text="@string/delivery_address_"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_15" />
+
+    <EditText
+        android:id="@+id/et_activity_editaddress_locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_activity_editaddress_addresstitle"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_toEndOf="@id/tv_activity_editaddress_addresstitle"
+        android:layout_toRightOf="@id/tv_activity_editaddress_addresstitle"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="可直接点击右侧定位按钮"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGray_1"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="@dimen/size_text_15" />
+
+    <ImageView
+        android:id="@+id/iv_activity_editaddress_locate"
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:layout_alignEnd="@+id/tv_activity_editaddress_save"
+        android:layout_alignRight="@+id/tv_activity_editaddress_save"
+        android:layout_alignTop="@+id/et_activity_editaddress_locate"
+        android:src="@drawable/icon_locate" />
+
+    <View
+        android:id="@+id/view_activity_editaddress_line_three"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0.5"
+        android:layout_below="@id/iv_activity_editaddress_locate"
+        android:layout_toEndOf="@id/tv_activity_editaddress_addresstitle"
+        android:layout_toRightOf="@id/tv_activity_editaddress_addresstitle"
+        android:background="@color/colorGrayLight" />
+
+    <EditText
+        android:id="@+id/et_activity_editaddress_locatedetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_activity_editaddress_line_three"
+        android:layout_toEndOf="@id/tv_activity_editaddress_addresstitle"
+        android:layout_toRightOf="@id/tv_activity_editaddress_addresstitle"
+        android:background="@null"
+        android:hint="@string/enter_specific_address"
+        android:paddingBottom="@dimen/size_10"
+        android:paddingLeft="10dp"
+        android:paddingTop="@dimen/size_10"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGray_1"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="@dimen/size_text_15" />
+
+    <View
+        android:id="@+id/view_activity_editaddress_line_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/et_activity_editaddress_locatedetails"
+        android:background="@color/colorGray_2" />
+
+    <TextView
+        android:id="@+id/tv_activity_editaddress_receivername_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_activity_editaddress_line_two"
+        android:padding="@dimen/size_10"
+        android:text="@string/delivery_name_"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_15" />
+
+    <View
+        android:id="@+id/view_activity_editaddress_line_four"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_activity_editaddress_receivername_title"
+        android:background="@color/colorGray_2" />
+
+    <EditText
+        android:id="@+id/et_activity_editaddress_receivername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_activity_editaddress_line_two"
+        android:layout_toEndOf="@id/tv_activity_editaddress_receivername_title"
+        android:layout_toRightOf="@id/tv_activity_editaddress_receivername_title"
+        android:background="@null"
+        android:hint="请输入收货人姓名"
+        android:paddingBottom="@dimen/size_10"
+        android:paddingTop="@dimen/size_10"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGray_1"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="@dimen/size_text_15" />
+
+    <TextView
+        android:id="@+id/tv_activity_editaddress_receiverphone_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_activity_editaddress_line_four"
+        android:padding="@dimen/size_10"
+        android:text="@string/delivery_phone_"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_text_15" />
+
+    <EditText
+        android:id="@+id/et_activity_editaddress_receiverphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_activity_editaddress_receiverphone_title"
+        android:layout_toEndOf="@+id/tv_activity_editaddress_receiverphone_title"
+        android:layout_toRightOf="@+id/tv_activity_editaddress_receiverphone_title"
+        android:background="@null"
+        android:hint="请输入收货人号码"
+        android:paddingBottom="@dimen/size_10"
+        android:paddingTop="@dimen/size_10"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGray_1"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="@dimen/size_text_15" />
+
+    <View
+        android:id="@+id/view_activity_editaddress_line_five"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_15"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv_activity_editaddress_receiverphone_title"
+        android:background="@color/colorGray_2" />
+
+    <CheckBox
+        android:id="@+id/cb_activity_editaddress"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_activity_editaddress_line_five"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cb_activity_editaddress"
+        android:layout_toRightOf="@id/cb_activity_editaddress"
+        android:text="设为默认地址"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_activity_editaddress_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/cb_activity_editaddress"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button_round_green"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/colorWrite"
+        android:textSize="15sp" />
+</RelativeLayout>

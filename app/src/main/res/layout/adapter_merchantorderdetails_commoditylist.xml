@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_10">
+
+    <ImageView
+        android:id="@+id/iv_adapter_activitymerchantorder_commoditylist_goods"
+        android:layout_width="@dimen/size_80"
+        android:layout_height="@dimen/size_80"
+        android:src="@drawable/test_sale_default"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_activitymerchantorder_commoditylist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_adapter_activitymerchantorder_commoditylist_goods"
+        android:layout_toRightOf="@id/iv_adapter_activitymerchantorder_commoditylist_goods"
+        android:layout_marginLeft="10dp"
+        android:text="商品名称"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_activitymerchantorder_commoditylist_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_adapter_activitymerchantorder_commoditylist_goods"
+        android:layout_marginLeft="10dp"
+        android:text="@string/rmb"
+        android:textSize="14sp"
+        android:textColor="@color/colorOrange" />
+
+    <TextView
+        android:id="@+id/tv_adapter_activitymerchantorder_commoditylist_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_adapter_activitymerchantorder_commoditylist_rmb"
+        android:layout_marginLeft="2dp"
+        android:text="0.00"
+        android:textSize="14sp"
+        android:textColor="@color/colorOrange" />
+
+    <TextView
+        android:id="@+id/tv_adapter_activitymerchantorder_commoditylist_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_adapter_activitymerchantorder_commoditylist_goods"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_toRightOf="@id/iv_adapter_activitymerchantorder_commoditylist_goods"
+        android:text="x"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_adapter_activitymerchantorder_commoditylist_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_adapter_activitymerchantorder_commoditylist_times"
+        android:layout_marginLeft="@dimen/size_5"
+        android:layout_toEndOf="@+id/tv_adapter_activitymerchantorder_commoditylist_times"
+        android:layout_toRightOf="@+id/tv_adapter_activitymerchantorder_commoditylist_times"
+        android:text="0"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bsl_pointshop_commodity_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/cb_pointshop_commodity_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_280"
+                android:layout_below="@+id/rl_pointshop"
+                app:canLoop="true"></com.bigkoo.convenientbanner.ConvenientBanner>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60">
+
+                <ImageView
+                    android:id="@+id/iv_point_title"
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_18"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_30"
+                    android:src="@drawable/point" />
+
+                <TextView
+                    android:id="@+id/tv_activity_pointshop_commoditydetails_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_toRightOf="@+id/iv_point_title"
+                    android:text="150"
+                    android:textSize="@dimen/size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_point_title"
+                    android:layout_toRightOf="@+id/tv_activity_pointshop_commoditydetails_point"
+                    android:text="积分"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/tv_line"
+                    android:layout_width="@dimen/size_1"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:background="@color/colorGray_1" />
+
+                <Button
+                    android:id="@+id/btn_activity_pointshop_commoditydetails"
+                    android:layout_width="@dimen/size_120"
+                    android:layout_height="@dimen/size_34"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_button_round_green"
+                    android:paddingLeft="@dimen/size_25"
+                    android:paddingRight="@dimen/size_25"
+                    android:text="立即兑换"
+                    android:textColor="@color/colorWrite"
+                    android:textSize="@dimen/size_text_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="@color/colorGray_1" />
+
+            <WebView
+                android:id="@+id/tv_activity_pointshop_commoditydetails_goodsintroduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+        </LinearLayout>
+    </ScrollView>
+</com.flipboard.bottomsheet.BottomSheetLayout>

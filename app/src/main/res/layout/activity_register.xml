@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_regiteractivity_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_20"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/enter_phonenumber"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="@dimen/size_10"
+        android:textColorHint="@color/colorGray_1"
+        android:textSize="@dimen/size_text_14" />
+
+    <EditText
+        android:id="@+id/et_regiteractivity_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_20"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/enter_password_register"
+        android:inputType="textPassword"
+        android:padding="@dimen/size_10"
+        android:singleLine="true"
+        android:textColorHint="@color/colorGray_1"
+        android:textSize="@dimen/size_text_14" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20">
+
+        <EditText
+            android:id="@+id/et_regiteractivity_terify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_edittext"
+            android:hint="@string/enter_sms_terify"
+            android:padding="@dimen/size_10"
+            android:singleLine="true"
+            android:textColorHint="@color/colorGray_1"
+            android:textSize="@dimen/size_text_14" />
+
+        <TextView
+            android:id="@+id/tv_registeractivity_getterify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/et_regiteractivity_terify"
+            android:layout_alignEnd="@id/et_regiteractivity_terify"
+            android:layout_alignRight="@id/et_regiteractivity_terify"
+            android:layout_alignTop="@id/et_regiteractivity_terify"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_button_round_green"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="获取验证码"
+            android:textColor="@color/colorWrite"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_registeractivity_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@drawable/background_button_round_green"
+        android:gravity="center"
+        android:text="@string/complete_register"
+        android:textColor="@color/colorWrite"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_is_agree"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/tv_registeractivity_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agreement"
+            android:textSize="14sp"
+            android:textColor="@color/colorGreenBefore" />
+    </LinearLayout>
+
+</LinearLayout>

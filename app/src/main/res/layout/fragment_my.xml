@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wudou="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWrite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_100"
+                android:background="@color/colorGreenBefore">
+
+                <com.yundian.wudou.customview.CircleImageView
+                    android:id="@+id/civ_fragmentmy_icon"
+                    android:layout_width="@dimen/size_70"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/size_20"
+                    wudou:border_color="@color/colorBlack"
+                    wudou:border_width="@dimen/size_1" />
+
+                <ImageView
+                    android:id="@+id/iv_fragmentmy_setting"
+                    android:layout_width="@dimen/size_25"
+                    android:layout_height="@dimen/size_25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="@dimen/size_30"
+                    android:layout_marginTop="@dimen/size_15"
+                    android:src="@drawable/background_setting" />
+
+                <TextView
+                    android:id="@+id/tv_fragmentmy_integral_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/civ_fragmentmy_icon"
+                    android:layout_toRightOf="@+id/civ_fragmentmy_icon"
+                    android:text="积分："
+                    android:textColor="@color/colorWrite"
+                    android:textSize="@dimen/size_text_15" />
+
+                <TextView
+                    android:id="@+id/tv_fragmentmy_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_fragmentmy_integral_title"
+                    android:layout_alignLeft="@id/tv_fragmentmy_integral_title"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:text="用户名"
+                    android:textColor="@color/colorWrite"
+                    android:textSize="@dimen/size_text_15" />
+
+                <TextView
+                    android:id="@+id/tv_fragmentmy_integral_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_fragmentmy_integral_title"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@+id/tv_fragmentmy_integral_title"
+                    android:layout_toRightOf="@+id/tv_fragmentmy_integral_title"
+                    android:text="0"
+                    android:textColor="@color/colorWrite"
+                    android:textSize="@dimen/size_text_15" />
+
+                <TextView
+                    android:id="@+id/tv_fragmentmy_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_fragmentmy_integral_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/size_30"
+                    android:text="签到得积分"
+                    android:textColor="@color/colorWrite"
+                    android:textSize="@dimen/size_text_15" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_allorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_allorder_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_allorder" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_allorder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/myall_order"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_allorder_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+
+                </TableRow>
+
+                <View
+                    android:id="@+id/view_fragmentmy_lineone"
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_merchantorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_merchantorder_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_merchant_order" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_merchantorder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/merchant_order"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_merchantorder_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+
+                </TableRow>
+
+                <View
+                    android:id="@+id/view_fragmentmy_linetwo"
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_merchantmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_merchantmessage_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/message_checked" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_merchanmessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/merchanmessage"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_merchantmessage_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="15dp" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_coupons"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_coupons_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_coupons" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_coupons"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/my_coupons"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_coupons_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_15"
+                    android:background="@color/colorGray_2" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_manageaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_manageaddress_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_manage_address" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_manageaddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/manage_address"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_manageaddress_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_evaluate_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_evaluate" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_evaluate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/my_evaluate"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_evaluate_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_collection_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_collection_green" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_collection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/my_collection"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_collection_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15"
+                    android:visibility="gone" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_secondhand"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_secondhand_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_secondhand" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_secondhand"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/second_hand"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_secondhand_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_convenience_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:visibility="gone"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_convenience_services_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_convenience_services" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_convenience_services"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/convenience_services"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_convenience_services_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_message_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/message_checked" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_message"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/message"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_message_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_sharetofriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_sharetofriends_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_sharetofriends" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_sharetofriends"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/sharetofriends"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_sharetofriends_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+
+                </TableRow>
+
+                <View
+                    style="@style/divider_height_one"
+                    android:layout_marginLeft="@dimen/size_15" />
+
+                <TableRow
+                    android:id="@+id/tr_fragmentmy_helpcenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/size_12"
+                    android:paddingLeft="@dimen/size_15"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingTop="@dimen/size_12">
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_helpcenter_icon"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/icon_helpcenter" />
+
+                    <TextView
+                        android:id="@+id/tv_fragmentmy_helpcenter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_20"
+                        android:text="@string/helpcenter"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_fragmentmy_helpcenter_go"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_14"
+                        android:src="@drawable/back_my" />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_15"
+                    android:background="@color/colorGray_2" />
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWrite"
+    android:orientation="vertical"
+
+   >
+    <FrameLayout
+        android:background="@color/colorWrite"
+        android:id="@+id/ly_bg"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_adapter_fragmenthome_prefered_goods"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size_2"
+            android:scaleType="fitXY"
+            android:src="@color/colorGreenAfter" />
+
+        <ImageView
+            android:id="@+id/iv_shop_rx"
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/size_2"
+            android:src="@drawable/shop_rx" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_adapter_fragmenthome_prefered_price"
+        style="@style/text_orange_13"
+       android:layout_gravity="center"
+        android:text="¥ 0.00" />
+
+</LinearLayout>

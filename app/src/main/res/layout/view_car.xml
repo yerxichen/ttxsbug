@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yundian.wudou.utils.ShopCarView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/car_mainfl"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_gravity="bottom"
+    android:elevation="4dp"
+    android:gravity="bottom">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWrite">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:background="@color/colorWrite"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_activitystoredetails_settlement"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorGray_divider"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:text="差¥0.00"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size_text_14" />
+
+            <TextView
+                android:id="@+id/tv_activitystoredetails_to_shoppingcart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size_2"
+                android:layout_toLeftOf="@id/tv_activitystoredetails_settlement"
+                android:background="@color/colorGray_divider"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:text="去购物车"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/tv_activitystoredetails_to_shoppingcart">
+
+                <RelativeLayout
+                    android:id="@+id/rl_act_storedetail_shopcart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/iv_activitystoredetails_shoppingcart_tv"
+                        android:layout_width="@dimen/size_35"
+                        android:layout_height="@dimen/size_35"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/shopcart_default" />
+
+                    <TextView
+                        android:id="@+id/tv_activitystoredetails_total"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignRight="@+id/iv_activitystoredetails_shoppingcart_tv"
+                        android:background="@drawable/background_cycle_green"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/colorWrite"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/iv_activitystoredetails_line"
+                    android:layout_width="2sp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/rl_act_storedetail_shopcart"
+                    android:layout_alignTop="@id/rl_act_storedetail_shopcart"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/rl_act_storedetail_shopcart"
+                    android:background="@color/colorGray_divider" />
+
+                <TextView
+                    android:id="@+id/tv_activitystoredetails_message_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_toRightOf="@id/iv_activitystoredetails_line"
+                    android:gravity="center_vertical"
+                    android:text="合计:"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_text_14" />
+
+                <TextView
+                    android:id="@+id/tv_activitystoredetails_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_activitystoredetails_message_title"
+                    android:text="¥0.00"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="@dimen/size_text_14" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</com.yundian.wudou.utils.ShopCarView>

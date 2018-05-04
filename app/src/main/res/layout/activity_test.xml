@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/size_60"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_80"
+        android:background="@color/colorGreenBefore">
+
+        <com.yundian.wudou.customview.CircleImageView
+            android:id="@+id/iv_activitystoredetails_shopicon"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_20" />
+
+        <TextView
+            android:id="@+id/tv_activitystoredetails_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_activitystoredetails_shopicon"
+            android:layout_toEndOf="@id/iv_activitystoredetails_shopicon"
+            android:layout_toRightOf="@id/iv_activitystoredetails_shopicon"
+            android:text="有机绿色蔬菜"
+            android:textColor="@color/colorWrite" />
+
+        <TextView
+            android:id="@+id/tv_activitystoredetails_shopcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_activitystoredetails_shopname"
+            android:layout_alignStart="@id/tv_activitystoredetails_shopname"
+            android:layout_below="@id/tv_activitystoredetails_shopname"
+            android:text="配送费¥5 | 起送价¥20"
+            android:textColor="@color/colorWrite"
+            android:textSize="@dimen/size_text_12" />
+
+        <TextView
+            android:id="@+id/tv_activitystoredetails_shopsale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_activitystoredetails_shopname"
+            android:layout_alignStart="@id/tv_activitystoredetails_shopname"
+            android:layout_below="@id/tv_activitystoredetails_shopcontent"
+            android:text="共0件商品 | 月售0单"
+            android:textColor="@color/colorWrite"
+            android:textSize="@dimen/size_text_12" />
+
+
+        <ImageView
+            android:id="@+id/iv_activity_storedetails_receviecoupon"
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_20"
+            android:src="@drawable/coupon" />
+    </RelativeLayout>
+</LinearLayout>

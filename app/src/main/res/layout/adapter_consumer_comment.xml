@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RatingBar
+            android:id="@+id/rb_adapter_consumer_comment"
+            style="@style/MyRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:rating="5" />
+
+        <TextView
+            android:id="@+id/tv_adapter_consumer_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_30"
+            android:layout_toRightOf="@+id/rb_adapter_consumer_comment"
+            android:text="用户名"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_text_14" />
+
+        <TextView
+            android:id="@+id/tv_adapter_consumer_comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="00.00"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_adapter_consumer_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="评价内容"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp" />
+</LinearLayout>
