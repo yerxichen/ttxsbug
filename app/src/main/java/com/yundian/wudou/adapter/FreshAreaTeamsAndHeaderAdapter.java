@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersAdapter;
 import com.yundian.wudou.R;
@@ -25,7 +26,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by chenlijin on 2016/3/18.
+ * Created by chenlijin on 2016/3/18.1
  */
 public class FreshAreaTeamsAndHeaderAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements StickyRecyclerHeadersAdapter<RecyclerView.ViewHolder> {
     private List<StoresinfoData.StorescategoriesBean.DataBeanX> categoryList;
@@ -38,6 +39,7 @@ public class FreshAreaTeamsAndHeaderAdapter extends RecyclerView.Adapter<Recycle
     private SetOnItemClickLitener mOnItemClickLitener;
     private String storeId, storeName, storeUrl, startValue, sendPrice;
     private boolean isOpen;
+//    private View view;
 
     public FreshAreaTeamsAndHeaderAdapter(Context context, List<StoresinfoData.StorescategoriesBean.DataBeanX> categoryList) {
         mContext = context;
@@ -188,8 +190,8 @@ public class FreshAreaTeamsAndHeaderAdapter extends RecyclerView.Adapter<Recycle
      */
     @Override
     public ContentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.adapter_storeadetailsactivity_right_test, parent, false);
+        Log.e("my", "onCreateViewHolder: 执行了！！！！");
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_storeadetailsactivity_right_test, parent, false);
         return new ContentViewHolder(view);
     }
 
@@ -204,20 +206,20 @@ public class FreshAreaTeamsAndHeaderAdapter extends RecyclerView.Adapter<Recycle
             @Override
             public void onClick(View v) {
                 //数量加1
-          //      if (isOpen == true) {
+                //      if (isOpen == true) {
 
-                    count = Integer.parseInt(data.getProductCount());
+                count = Integer.parseInt(data.getProductCount());
 
-                    count++;
-                    data.setProductCount(count + "");
-                    mOrderManager.addProduct(storeId, storeName, storeUrl, data.getPid(), data.getName(), data.getImg(), String.valueOf(data.getShopprice()), "", startValue, sendPrice);
-                    //回调
-                    if (mStoreItemAddListener != null) {
-                        mStoreItemAddListener.storeItemAddListener();
-                    }
+                count++;
+                data.setProductCount(count + "");
+                mOrderManager.addProduct(storeId, storeName, storeUrl, data.getPid(), data.getName(), data.getImg(), String.valueOf(data.getShopprice()), "", startValue, sendPrice);
+                //回调
+                if (mStoreItemAddListener != null) {
+                    mStoreItemAddListener.storeItemAddListener();
+                }
 
-                    notifyDataSetChanged();
-        //        }
+                notifyDataSetChanged();
+                //        }
             }
         });
 
@@ -225,24 +227,27 @@ public class FreshAreaTeamsAndHeaderAdapter extends RecyclerView.Adapter<Recycle
             @Override
             public void onClick(View v) {
                 //数量减1
-          //      if (isOpen == true) {
+                //      if (isOpen == true) {
 
 
-                    if (count > 0) {
-                        count = Integer.parseInt(data.getProductCount());
-                        count--;
-                        data.setProductCount(count + "");
-                    }
-                    mOrderManager.reduceProduct(data.getPid());
-                    //回调
-                    if (mStoreItemReduceListener != null) {
-                        mStoreItemReduceListener.storeItemReduceListener();
-                    }
-                    notifyDataSetChanged();
-           //     }
+                if (count > 0) {
+                    count = Integer.parseInt(data.getProductCount());
+                    count--;
+                    data.setProductCount(count + "");
+                }
+                mOrderManager.reduceProduct(data.getPid());
+                //回调
+                if (mStoreItemReduceListener != null) {
+                    mStoreItemReduceListener.storeItemReduceListener();
+                }
+                notifyDataSetChanged();
+                //     }
             }
         });
-        Picasso.with(mContext).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(viewHolder.mImageViewGoods);
+//        Picasso.with(mContext).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(viewHolder.mImageViewGoods);
+        Glide.with(mContext)
+                .load(FlagData.FLAG_IMGADDRESS + data.getImg())
+                .into(viewHolder.mImageViewGoods);
         viewHolder.mTextViewName.setText(data.getName());
         viewHolder.mTextViewPrice.setText(data.getShopprice());
         viewHolder.mTextViewCount.setText(data.getProductCount());

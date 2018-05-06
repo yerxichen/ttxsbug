@@ -27,7 +27,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import com.bumptech.glide.Glide;
 import com.mylhyl.circledialog.CircleDialog;
 import com.mylhyl.circledialog.callback.ConfigButton;
 import com.mylhyl.circledialog.callback.ConfigText;
@@ -35,8 +35,7 @@ import com.mylhyl.circledialog.callback.ConfigTitle;
 import com.mylhyl.circledialog.params.ButtonParams;
 import com.mylhyl.circledialog.params.TextParams;
 import com.mylhyl.circledialog.params.TitleParams;
-
-import com.squareup.picasso.Picasso;
+//import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.adapter.BaseFragmentAdapter;
 import com.yundian.wudou.adapter.StoreDetailsBottomAdapter;
@@ -48,7 +47,6 @@ import com.yundian.wudou.data.ShoppingCartData;
 import com.yundian.wudou.data.StoresinfoData;
 import com.yundian.wudou.datawork.OrderManager;
 import com.yundian.wudou.datawork.SharedpreferencesManager;
-
 import com.yundian.wudou.fragment.FreshAreaFragment;
 import com.yundian.wudou.fragment.VegetableAreaFragment;
 import com.yundian.wudou.network.JsonBeanConsumerUncheckMessage;
@@ -68,6 +66,8 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+
+//import com.squareup.picasso.Picasso;
 
 /**
  * Created by taozipc on 2017/11/6.
@@ -564,7 +564,11 @@ public class VegetableShopActivity extends AppCompatActivity implements NetWorkI
         tvShopName.setText(storeName);
         tvShopContent.setText("配送费￥ " + sendPrice + " | 起送价￥ " + startValue);
         tvShopSale.setText("共" + productsCount + "件商品 | 月售" + monthlySales + "单");
-        Picasso.with(VegetableShopActivity.this).load(storeUrl).into(civShopIcon);
+//        Picasso.with(VegetableShopActivity.this).load(storeUrl).into(civShopIcon);
+        Glide.with(VegetableShopActivity.this)
+                .load(storeUrl)
+                .into(civShopIcon);
+
         //是否收藏店铺
         if (sharedpreferencesManager.isLogin() && hasFavorite.equals("1")) {
             ivCollect.setImageResource(R.drawable.collect);

@@ -35,6 +35,7 @@ import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
+import com.bumptech.glide.Glide;
 import com.jwenfeng.library.pulltorefresh.BaseRefreshListener;
 import com.jwenfeng.library.pulltorefresh.PullToRefreshLayout;
 import com.squareup.picasso.Picasso;
@@ -956,14 +957,19 @@ public class HomePageFragment extends Fragment implements NetWorkInterface.OnGet
             preferedListTwo.add(data3Bean);
         }
 
-        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getAdverts3().getData().get(0).getImg()).into(homeBannerOne);
+//        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getAdverts3().getData().get(0).getImg()).into(homeBannerOne);
+//        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts().get(0).getImg()).into(homeBannerOne_gai1);
+//        Log.d(">>精品推荐1>", FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts().get(0).getImg());
+//        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts2().get(0).getImg()).into(homePreferedBannerOne);
+//        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts3().get(0).getImg()).into(homePreferedBannerSecond);
+//        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getAdverts_stores_nearby().getData().get(0).getImg()).into(homeShopBannerOne);
 
-        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts().get(0).getImg()).into(homeBannerOne_gai1);
+        Glide.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getAdverts3().getData().get(0).getImg()).into(homeBannerOne);
+        Glide.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts().get(0).getImg()).into(homeBannerOne_gai1);
         Log.d(">>精品推荐1>", FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts().get(0).getImg());
-        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts2().get(0).getImg()).into(homePreferedBannerOne);
-        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts3().get(0).getImg()).into(homePreferedBannerSecond);
-        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getAdverts_stores_nearby().getData().get(0).getImg()).into(homeShopBannerOne);
-
+        Glide.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts2().get(0).getImg()).into(homePreferedBannerOne);
+        Glide.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getProducts_competitive().getAdverts3().get(0).getImg()).into(homePreferedBannerSecond);
+        Glide.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getAdverts_stores_nearby().getData().get(0).getImg()).into(homeShopBannerOne);
 
         homeBannerOne_type = jsonBeanHomePage.getAdverts3().getData().get(0).getUrltype();
         homeBannerOne_UrlAddress = jsonBeanHomePage.getAdverts3().getData().get(0).getUrl();
@@ -1085,7 +1091,8 @@ public class HomePageFragment extends Fragment implements NetWorkInterface.OnGet
         Log.d(">>>>>>>", jsonBeanHomePage.toString());
 //
         Log.d(">>tup>>>>>", FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getData().get(0).getImg());
-        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getData().get(0).getImg()).into(home_iv_tp);
+//        Picasso.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getData().get(0).getImg()).into(home_iv_tp);
+        Glide.with(getActivity()).load(FlagData.FLAG_IMGADDRESS + jsonBeanHomePage.getData().get(0).getImg()).into(home_iv_tp);
     }
 
 
@@ -1145,7 +1152,8 @@ public class HomePageFragment extends Fragment implements NetWorkInterface.OnGet
 
         @Override
         public void UpdateUI(Context context, int position, AdvertData data) {
-            Picasso.with(getContext()).load(data.getImageAddress()).into(imageView);
+//            Picasso.with(getContext()).load(data.getImageAddress()).into(imageView);
+            Glide.with(getContext()).load(data.getImageAddress()).into(imageView);
         }
     }
 

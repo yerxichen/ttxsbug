@@ -3,6 +3,7 @@ package com.yundian.wudou.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -181,6 +182,7 @@ public class StoreActivity extends BaseActivity implements NetWorkInterface.OnGe
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(StoreActivity.this, VegetableShopActivity.class);
+                Log.d("my", "store_StoreId: "+storeList.get(position).getStoreId());
                 intent.putExtra(FlagData.FLAG_SHOP_ID, storeList.get(position).getStoreId());
                 startActivity(intent);
             }

@@ -48,15 +48,6 @@
             android:gravity="center"
             android:src="@drawable/icon_collection_write" />
 
-        <ImageView
-            android:id="@+id/iv_activitystoredetails_message"
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/message_rectangle_default" />
     </RelativeLayout>
 
     <FrameLayout
@@ -159,5 +150,15 @@
                     android:textSize="@dimen/size_text_14" />
             </RelativeLayout>
         </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_activitystoredetails_message"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/message_rectangle_default" />
     </FrameLayout>
 </LinearLayout>

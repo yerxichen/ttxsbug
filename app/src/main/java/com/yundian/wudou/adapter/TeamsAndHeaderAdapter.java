@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersAdapter;
 import com.yundian.wudou.R;
@@ -230,7 +231,11 @@ public class TeamsAndHeaderAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 //  }
             }
         });
-        Picasso.with(mContext).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(viewHolder.mImageViewGoods);
+//        Picasso.with(mContext).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(viewHolder.mImageViewGoods);
+        Glide.with(mContext)
+                .load(FlagData.FLAG_IMGADDRESS + data.getImg())
+                .into(viewHolder.mImageViewGoods);
+
         viewHolder.mTextViewName.setText(data.getName());
         viewHolder.mTextViewPrice.setText(data.getShopprice());
         viewHolder.mTextViewCount.setText(data.getProductCount());

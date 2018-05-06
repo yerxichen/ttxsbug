@@ -150,7 +150,7 @@ public class OrderManager {
 
         for (ShoppingCartData data : getShoppingCartDataList()) {
             if (data.getStoreId().equals(storeId)) {
-                mShoppingCartDataList.add(data);
+               mShoppingCartDataList.add(data);
             }
         }
         for (ShoppingCartData data : mShoppingCartDataList) {

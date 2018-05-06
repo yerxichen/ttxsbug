@@ -1,6 +1,7 @@
 package com.yundian.wudou.activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +14,10 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.yundian.wudou.data.FlagData;
 import com.yundian.wudou.datawork.SharedpreferencesManager;
 import com.yundian.wudou.network.JsonBeanCurrentVersion;
 import com.yundian.wudou.network.JsonBeanGetToken;
@@ -46,12 +49,14 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
     private void initialize() {
         sharedpreferencesManager = new SharedpreferencesManager(SplashActivity.this);
         netWorkOperate = new NetWorkOperate(SplashActivity.this);
-
+        //判断权限，如果没有权限则弹出获取权限的提示
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_READ_PHONE_STATE);
         }else{
             model = Build.MODEL;
+            //获取TelephonyManager服务
             TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+            //获取设备id  即IEMI码
             imei = telephonyManager.getDeviceId();
             netWorkOperate.getCurrentVersion();
         }
@@ -68,6 +73,7 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
         Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
 
+    //如果是第一次打开app进入轮播欢迎页  否则直接进主页
     @Override
     public void onGetData(JsonBeanHomePage jsonBeanHomePage) {
         sharedpreferencesManager.saveHomePageJson(jsonBeanHomePage);
@@ -77,6 +83,10 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
                 if (sharedpreferencesManager.getFirstShow()) {
                     Intent intent = new Intent(SplashActivity.this, FragmentContainerActivity.class);
                     SplashActivity.this.startActivity(intent);
+//                    Intent intent = new Intent(SplashActivity.this, VegetableShopActivity.class);
+//                    intent.putExtra(FlagData.FLAG_SHOP_ID, "30");
+                    SplashActivity.this.startActivity(intent);
+
                     SplashActivity.this.finish();
                 } else {
                     Intent intent = new Intent(SplashActivity.this, GuideActivity.class);
@@ -89,6 +99,7 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
 
     @Override
     public void onGetCurrentVersion(JsonBeanCurrentVersion jsonBeanCurrentVersion) {
+        //获取当前版本号，如果等于2.0则不更新，其他情况提示更新
         if (jsonBeanCurrentVersion.getVersion().equals("2.0")) {
             if (!sharedpreferencesManager.getFirstShow()) {
                 netWorkOperate.getInitialToken(model, imei);
@@ -99,11 +110,12 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
             Toast.makeText(this, "有新版本发布，请更新", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent();
             intent.setData(Uri.parse(jsonBeanCurrentVersion.getUrl()));
-            intent.setAction(Intent.ACTION_VIEW);
+            intent.setAction(Intent.ACTION_VIEW);//根据情况打开相应的服务（这里就是打开浏览器）
             startActivity(intent);
         }
     }
 
+    @SuppressLint("MissingPermission")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);

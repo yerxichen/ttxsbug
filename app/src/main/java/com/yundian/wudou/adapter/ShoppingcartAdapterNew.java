@@ -164,7 +164,9 @@ public class ShoppingcartAdapterNew extends BaseAdapter {
 //去商铺
 
                 Intent intent = new Intent(context, VegetableShopActivity.class);
+                Log.d("my", "shop_StoreId: "+data.getStoreId());
                 intent.putExtra(FlagData.FLAG_SHOP_ID, data.getStoreId());
+//                intent.putExtra(FlagData.FLAG_SHOP_ID, 30);
                 context.startActivity(intent);
 //
 //

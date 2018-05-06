@@ -20,7 +20,8 @@ public class MyApplication extends Application {
         //极光推送
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
-        ImagePipelineConfig frescoConfig = ImagePipelineConfig.newBuilder(this).setDownsampleEnabled(true).build();
-        Fresco.initialize(this, frescoConfig);
+//        ImagePipelineConfig frescoConfig = ImagePipelineConfig.newBuilder(this).setDownsampleEnabled(true).build();
+//        Fresco.initialize(this, frescoConfig);
+        Fresco.initialize(this);
     }
 }

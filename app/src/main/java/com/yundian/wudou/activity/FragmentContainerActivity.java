@@ -1,5 +1,6 @@
 package com.yundian.wudou.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -151,6 +152,7 @@ public class FragmentContainerActivity extends BaseActivity {
     }
 
     //显示第几个fragment
+    @SuppressLint("RestrictedApi")
     public void showFragment(int i) {
         FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
         for (Fragment fragment : mFragmentManager.getFragments()) {
