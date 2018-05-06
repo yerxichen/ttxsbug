@@ -33,9 +33,11 @@ public class OrderManager {
 
     private OrderSQLiteOpenHelper mSQLiteOpenHelper;
     private SQLiteDatabase db;
+    //自定义sqllite数据库位置
+    private MyContextWrapper myContextWrapper;
 
     public OrderManager(Context context) {
-        this.mSQLiteOpenHelper = new OrderSQLiteOpenHelper(context);
+        this.mSQLiteOpenHelper = new OrderSQLiteOpenHelper(myContextWrapper=new MyContextWrapper(context,"run"));
         db = mSQLiteOpenHelper.getWritableDatabase();
     }
 
