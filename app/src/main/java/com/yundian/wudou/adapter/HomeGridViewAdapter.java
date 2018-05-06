@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.FlagData;
@@ -65,7 +66,7 @@ public class HomeGridViewAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
 
         }
-        Picasso.with(context).load(FlagData.FLAG_IMGADDRESS + mList.get(position).getImg()).into(viewHolder.promotionIcon);
+        Glide.with(context).load(FlagData.FLAG_IMGADDRESS + mList.get(position).getImg()).into(viewHolder.promotionIcon);
         if (mList.get(position).getIshot().equals("1")) {
             viewHolder.iv_shop_rx.setVisibility(View.VISIBLE);
         } else {

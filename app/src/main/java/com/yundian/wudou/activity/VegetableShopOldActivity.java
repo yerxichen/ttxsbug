@@ -26,6 +26,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.adapter.BaseFragmentAdapter;
@@ -553,7 +554,7 @@ public class VegetableShopOldActivity extends AppCompatActivity implements NetWo
         tvShopName.setText(storeName);
         tvShopContent.setText("配送费￥ " + sendPrice + " | 起送价￥ " + startValue);
         tvShopSale.setText("共" + productsCount + "件商品 | 月售" + monthlySales + "单");
-        Picasso.with(VegetableShopOldActivity.this).load(storeUrl).into(civShopIcon);
+        Glide.with(VegetableShopOldActivity.this).load(storeUrl).into(civShopIcon);
         //是否收藏店铺
         if (sharedpreferencesManager.isLogin() && hasFavorite.equals("1")) {
             ivCollect.setImageResource(R.drawable.collect);

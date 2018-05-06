@@ -25,6 +25,10 @@ import com.yundian.wudou.network.JsonBeanHomePage;
 import com.yundian.wudou.network.NetWorkOperate;
 import com.yundian.wudou.publicinterface.NetWorkInterface;
 
+import kr.co.namee.permissiongen.PermissionFail;
+import kr.co.namee.permissiongen.PermissionGen;
+import kr.co.namee.permissiongen.PermissionSuccess;
+
 /**
  * Created by Administrator on 2016/11/29 0029.
  */
@@ -50,16 +54,30 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
         sharedpreferencesManager = new SharedpreferencesManager(SplashActivity.this);
         netWorkOperate = new NetWorkOperate(SplashActivity.this);
         //判断权限，如果没有权限则弹出获取权限的提示
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_READ_PHONE_STATE);
-        }else{
-            model = Build.MODEL;
-            //获取TelephonyManager服务
-            TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
-            //获取设备id  即IEMI码
-            imei = telephonyManager.getDeviceId();
-            netWorkOperate.getCurrentVersion();
-        }
+
+//        else {
+//            model = Build.MODEL;
+//            //获取TelephonyManager服务
+//            TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+//            //获取设备id  即IEMI码
+//            imei = telephonyManager.getDeviceId();
+//            netWorkOperate.getCurrentVersion();
+//        }
+
+//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+//        }
+//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_READ_PHONE_STATE);
+//        }
+
+
+        PermissionGen.with(SplashActivity.this)
+                .addRequestCode(100)
+                .permissions(
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_PHONE_STATE)
+                .request();
     }
 
     @Override
@@ -115,15 +133,32 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
         }
     }
 
-    @SuppressLint("MissingPermission")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if ((requestCode == REQUEST_READ_PHONE_STATE) && (grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                model = Build.MODEL;
-                TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
-                imei = telephonyManager.getDeviceId();
-                netWorkOperate.getCurrentVersion();
-        }
+//        if ((requestCode == REQUEST_READ_PHONE_STATE) && (grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+//            model = Build.MODEL;
+//            TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+//            imei = telephonyManager.getDeviceId();
+//            netWorkOperate.getCurrentVersion();
+//        }
+        PermissionGen.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
     }
+
+    @SuppressLint("MissingPermission")
+    @PermissionSuccess(requestCode = 100)
+    public void doSomething() {
+        model = Build.MODEL;
+        //获取TelephonyManager服务
+        TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+        //获取设备id  即IEMI码
+        imei = telephonyManager.getDeviceId();
+        netWorkOperate.getCurrentVersion();
+    }
+
+    @PermissionFail(requestCode = 100)
+    public void doFailSomething() {
+        finish();
+    }
+
 }

@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.LoginActivity;
@@ -251,7 +252,7 @@ public class ShoppingcartAdapter extends BaseAdapter {
 
                 viewHolderGoods.mCheckBoxGoods.setChecked(data.isChecked());
                 Log.d(">>>购物车图片地址>>>", data.getProductUrl());
-                Picasso.with(context).load(FlagData.FLAG_IMGADDRESS +data.getProductUrl()).into(viewHolderGoods.mImageViewGoods);
+                Glide.with(context).load(FlagData.FLAG_IMGADDRESS +data.getProductUrl()).into(viewHolderGoods.mImageViewGoods);
                 viewHolderGoods.mTextViewGoods.setText(data.getProductName());
                 viewHolderGoods.mTextViewPrice.setText(decimalFormat.format(data.getProductPrice()));
                 viewHolderGoods.mTextViewCount.setText("" + data.getProductCount());

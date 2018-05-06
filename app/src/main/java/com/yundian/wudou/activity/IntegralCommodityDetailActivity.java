@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
+import com.bumptech.glide.Glide;
 import com.flipboard.bottomsheet.BottomSheetLayout;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
@@ -214,7 +215,7 @@ public class IntegralCommodityDetailActivity extends BaseActivity implements Net
         }
         @Override
         public void UpdateUI(Context context, int position, String data) {
-            Picasso.with(IntegralCommodityDetailActivity.this).load(data).into(imageView);
+            Glide.with(IntegralCommodityDetailActivity.this).load(data).into(imageView);
         }
     }
 }

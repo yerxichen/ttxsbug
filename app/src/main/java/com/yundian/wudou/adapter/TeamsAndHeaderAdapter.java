@@ -231,7 +231,7 @@ public class TeamsAndHeaderAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 //  }
             }
         });
-//        Picasso.with(mContext).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(viewHolder.mImageViewGoods);
+//        Glide.with(mContext).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(viewHolder.mImageViewGoods);
         Glide.with(mContext)
                 .load(FlagData.FLAG_IMGADDRESS + data.getImg())
                 .into(viewHolder.mImageViewGoods);

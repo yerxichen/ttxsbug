@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -48,7 +49,7 @@ public class SearchResultRecycleViewAdapter extends RecyclerView.Adapter<SearchR
     public void onBindViewHolder(SearchResultViewHolder holder, int position) {
         AdapterSearchResultRecycleViewData data = mList.get(position);
 
-        Picasso.with(context).load(data.getImg()).into(holder.mImageView);
+        Glide.with(context).load(data.getImg()).into(holder.mImageView);
         holder.mTextViewTitle.setText(data.getName());
         holder.mTextViewPrice.setText("" + data.getShopprice());
     }

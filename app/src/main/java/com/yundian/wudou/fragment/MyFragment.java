@@ -15,6 +15,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CouponsActivity;
@@ -268,7 +269,7 @@ public class MyFragment extends Fragment implements NetWorkInterface.OnGetUserIn
 
     @Override
     public void onGetUserInformationData(JsonBeanUserInformationData jsonBeanUserInformationData) {
-        Picasso.with(getContext()).load(FlagData.FLAG_IMGADDRESS + jsonBeanUserInformationData.getAvatar()).into(circleImageView);
+        Glide.with(getContext()).load(FlagData.FLAG_IMGADDRESS + jsonBeanUserInformationData.getAvatar()).into(circleImageView);
         tvUserName.setText(jsonBeanUserInformationData.getUsername());
         tvIntegral.setText(jsonBeanUserInformationData.getCredits());
     }

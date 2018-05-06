@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterIntegralMallData;
@@ -63,7 +64,7 @@ public class IntegralMallAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(data.getProductUrl()).into(viewHolder.mImageViewProduct);
+        Glide.with(context).load(data.getProductUrl()).into(viewHolder.mImageViewProduct);
         viewHolder.mTextViewProductName.setText(String.valueOf(data.getProductName()));
         viewHolder.mTextViewProductCount.setText(String.valueOf(data.getProductCount()));
         viewHolder.mTextViewProductExchange.setText(String.valueOf(data.getProductExchange()));

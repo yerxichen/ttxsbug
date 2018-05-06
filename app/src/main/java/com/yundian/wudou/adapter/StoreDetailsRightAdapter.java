@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -132,7 +133,7 @@ public class StoreDetailsRightAdapter extends BaseAdapter {
             }
         });
 
-        Picasso.with(context).load(data.getProductUrl()).into(viewHolder.mImageViewGoods);
+        Glide.with(context).load(data.getProductUrl()).into(viewHolder.mImageViewGoods);
         viewHolder.mTextViewName.setText(data.getProductName());
         viewHolder.mTextViewPrice.setText(data.getProductPrice());
         viewHolder.mTextViewCount.setText(data.getProductCount());

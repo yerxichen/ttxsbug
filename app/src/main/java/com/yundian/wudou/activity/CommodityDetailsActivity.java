@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
+import com.bumptech.glide.Glide;
 import com.mylhyl.circledialog.CircleDialog;
 import com.mylhyl.circledialog.callback.ConfigButton;
 import com.mylhyl.circledialog.callback.ConfigText;
@@ -344,7 +345,7 @@ public class CommodityDetailsActivity extends AppCompatActivity implements NetWo
         isOpen = jsonBeanCommodityDetailsData.getStoresinfo().getIsopen();
 
         tvStoreName.setText(storeName);
-        Picasso.with(CommodityDetailsActivity.this).load(storeUrl).into(ivStoreIcon);
+        Glide.with(CommodityDetailsActivity.this).load(storeUrl).into(ivStoreIcon);
         rbStoreStar.setRating(Float.parseFloat(starCount));
         tvSendPrice.setText("配送费￥" + sendPrice + "元 |");
         tvStartPrice.setText("起送价" + startPrice + "元");
@@ -524,7 +525,7 @@ public class CommodityDetailsActivity extends AppCompatActivity implements NetWo
 
         @Override
         public void UpdateUI(Context context, int position, String data) {
-            Picasso.with(CommodityDetailsActivity.this).load(data).into(imageView);
+            Glide.with(CommodityDetailsActivity.this).load(data).into(imageView);
         }
     }
 

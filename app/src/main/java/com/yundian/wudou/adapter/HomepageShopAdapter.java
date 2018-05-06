@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -105,7 +106,7 @@ public class HomepageShopAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
             viewHolder.promotion.removeAllViews();
         }
-        Picasso.with(context).load(FlagData.FLAG_IMGADDRESS + mList.get(position).getImg()).into(viewHolder.mImageViewShop);
+        Glide.with(context).load(FlagData.FLAG_IMGADDRESS + mList.get(position).getImg()).into(viewHolder.mImageViewShop);
         viewHolder.mTextViewName.setText(mList.get(position).getName());
         viewHolder.mTextViewDistance.setText(mList.get(position).getDistance());
         viewHolder.mTextViewCount.setText("月售" + mList.get(position).getMonthlysales() + "份");
@@ -246,7 +247,7 @@ public class HomepageShopAdapter extends BaseAdapter {
             viewHolder.mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Toast.makeText(context,"i" +i,Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"i" +i,Toast.LENGTH_SHORT).show();
 
                     Intent intent;
                     if(mList.get(i).getStoreid().equals("14"))

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -50,7 +51,7 @@ public class ClassificationRightRecycleViewAdapter extends RecyclerView.Adapter<
         AdapterClassificationRightRecycleData data = mList.get(position);
 
         holder.mTextViewName.setText(data.getName());
-        Picasso.with(context).load(data.getImgUrl()).into(holder.mImageView);
+        Glide.with(context).load(data.getImgUrl()).into(holder.mImageView);
     }
 
     @Override

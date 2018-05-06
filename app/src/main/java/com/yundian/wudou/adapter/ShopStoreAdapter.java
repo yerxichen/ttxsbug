@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterHomepageShopData;
@@ -70,7 +71,7 @@ public class ShopStoreAdapter extends BaseAdapter {
             viewHolder.mImageViewExpert.setVisibility(View.GONE);
         }
 
-        Picasso.with(context).load(data.getImageAddress()).into(viewHolder.mImageViewShop);
+        Glide.with(context).load(data.getImageAddress()).into(viewHolder.mImageViewShop);
 
         viewHolder.mTextViewName.setText(data.getName());
         viewHolder.mTextViewDistance.setText(data.getDistance());

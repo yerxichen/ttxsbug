@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterMyConvenienceServicesData;
@@ -67,7 +68,7 @@ public class MyServiceAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(data.getImgUrl()).into(viewHolder.imageView);
+        Glide.with(context).load(data.getImgUrl()).into(viewHolder.imageView);
         viewHolder.tvName.setText(data.getGoodsName());
         viewHolder.tvTime.setText("发布时间 : " + data.getPubdate());
         if (data.getLocation().equals("")) {

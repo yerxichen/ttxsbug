@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.FlagData;
@@ -47,7 +48,7 @@ public class HomepageShopAdapterNew extends RecyclerView.Adapter<HomepageShopAda
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Picasso.with(context).load(FlagData.FLAG_IMGADDRESS + mList.get(position).getImg()).into(holder.mImageViewShop);
+        Glide.with(context).load(FlagData.FLAG_IMGADDRESS + mList.get(position).getImg()).into(holder.mImageViewShop);
         holder.mTextViewName.setText(mList.get(position).getName());
         holder.mTextViewDistance.setText(mList.get(position).getDistance());
         holder.mTextViewCount.setText("月售" + mList.get(position).getMonthlysales() + "份");

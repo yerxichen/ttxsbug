@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -41,7 +42,7 @@ public class HomapagePreferedAdapter extends RecyclerView.Adapter<HomapagePrefer
     public void onBindViewHolder(PreferedViewHolder holder, int position) {
         JsonBeanHomePage.ProductsCompetitiveBean.Data2Bean data = mList.get(position);
 
-        Picasso.with(context).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(holder.mImageViewGoods);
+        Glide.with(context).load(FlagData.FLAG_IMGADDRESS + data.getImg()).into(holder.mImageViewGoods);
 
         holder.mTextViewPrice.setText("¥ " + data.getShopprice());
         holder.mTextViewName.setText(data.getName());

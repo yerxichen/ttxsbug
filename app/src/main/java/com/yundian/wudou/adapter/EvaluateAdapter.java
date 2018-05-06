@@ -17,6 +17,7 @@ import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
@@ -112,7 +113,7 @@ public class EvaluateAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(data.getImgUrl()).into(viewHolder.ivProductImg);
+        Glide.with(context).load(data.getImgUrl()).into(viewHolder.ivProductImg);
         viewHolder.tvProductName.setText(data.getProductName());
 
         if (data.getIsreviews().equals("1")) {
@@ -129,7 +130,7 @@ public class EvaluateAdapter extends BaseAdapter {
                 imageView.setLayoutParams(new ViewGroup.LayoutParams(150, ViewGroup.LayoutParams.MATCH_PARENT));
                 imageView.setPadding(0,0,15,0);
                 imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-                Picasso.with(context).load(data.getImgUrls().get(i)).into(imageView);
+                Glide.with(context).load(data.getImgUrls().get(i)).into(imageView);
                 viewHolder.llReviewProductImg.addView(imageView);
             }
 

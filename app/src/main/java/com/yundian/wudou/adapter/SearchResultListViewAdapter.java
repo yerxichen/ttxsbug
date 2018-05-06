@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterSearchResultListViewData;
@@ -65,7 +66,7 @@ public class SearchResultListViewAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(data.getImgUrl()).into(viewHolder.mImageView);
+        Glide.with(context).load(data.getImgUrl()).into(viewHolder.mImageView);
         viewHolder.mTextViewName.setText(data.getName());
         viewHolder.mTextViewSendPrice.setText("¥" + data.getSendPrice());
         viewHolder.mTextViewStartPrice.setText("¥" + data.getStartPrice());

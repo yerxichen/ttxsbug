@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -41,7 +42,7 @@ public class HomepageSaleAdapter extends RecyclerView.Adapter<HomepageSaleAdapte
     public void onBindViewHolder(SaleViewHolder holder, int position) {
         AdapterHomepageSaleData data = mList.get(position);
         Log.d(">>>首页图片地址>>>", data.getImageAddress());
-        Picasso.with(context).load(data.getImageAddress()).into(holder.mImageViewGoods);
+        Glide.with(context).load(data.getImageAddress()).into(holder.mImageViewGoods);
         holder.mTextViewName.setText(data.getName());
         holder.mTextViewPrice.setText("¥ " + data.getPrice());
         holder.tv_line_price.setText("¥ "+data.getMarketprice());

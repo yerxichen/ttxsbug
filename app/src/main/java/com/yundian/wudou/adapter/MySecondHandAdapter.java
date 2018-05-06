@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterMySecondHandData;
@@ -67,7 +68,7 @@ public class MySecondHandAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(data.getImgUrl()).into(viewHolder.imageView);
+        Glide.with(context).load(data.getImgUrl()).into(viewHolder.imageView);
         viewHolder.tvName.setText(data.getProductName());
         viewHolder.tvTime.setText("发布时间 : " + data.getPubdate());
         viewHolder.tvPrice.setText("¥ " + data.getPrice());

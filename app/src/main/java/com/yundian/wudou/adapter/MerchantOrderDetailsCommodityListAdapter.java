@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterMerchantOrderDetailsCommodityListData;
@@ -65,7 +66,7 @@ public class MerchantOrderDetailsCommodityListAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(data.getImageUrl()).into(viewHolder.mImageViewGoodds);
+        Glide.with(context).load(data.getImageUrl()).into(viewHolder.mImageViewGoodds);
         viewHolder.mTextViewName.setText(data.getProductName());
         viewHolder.mTextViewPrice.setText(data.getProductPrice());
         viewHolder.mTextViewCount.setText(data.getProductCount());

@@ -564,7 +564,7 @@ public class VegetableShopActivity extends AppCompatActivity implements NetWorkI
         tvShopName.setText(storeName);
         tvShopContent.setText("配送费￥ " + sendPrice + " | 起送价￥ " + startValue);
         tvShopSale.setText("共" + productsCount + "件商品 | 月售" + monthlySales + "单");
-//        Picasso.with(VegetableShopActivity.this).load(storeUrl).into(civShopIcon);
+//        Glide.with(VegetableShopActivity.this).load(storeUrl).into(civShopIcon);
         Glide.with(VegetableShopActivity.this)
                 .load(storeUrl)
                 .into(civShopIcon);

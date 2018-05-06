@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -212,9 +213,9 @@ public class ShoppingcartAdapterNew extends BaseAdapter {
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             if (url.contains("http")) {
 
-                Picasso.with(context).load(url).into(imageView);
+                Glide.with(context).load(url).into(imageView);
             } else {
-                Picasso.with(context).load(FlagData.FLAG_IMGADDRESS + url).into(imageView);
+                Glide.with(context).load(FlagData.FLAG_IMGADDRESS + url).into(imageView);
 
             }
             final int finalI = i;

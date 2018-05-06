@@ -21,6 +21,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.baseactivity.BaseActivity;
@@ -195,7 +196,7 @@ public class MySettingActivity extends BaseActivity implements NetWorkInterface.
 
     @Override
     public void onGetUserInformationData(JsonBeanUserInformationData jsonBeanUserInformationData) {
-        Picasso.with(this).load(FlagData.FLAG_IMGADDRESS + jsonBeanUserInformationData.getAvatar()).into(circleImageView);
+        Glide.with(this).load(FlagData.FLAG_IMGADDRESS + jsonBeanUserInformationData.getAvatar()).into(circleImageView);
         tvUserName.setText(jsonBeanUserInformationData.getUsername());
     }
 

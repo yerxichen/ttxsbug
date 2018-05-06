@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterDailySaleData;
@@ -60,7 +61,7 @@ public class DailySaleAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(mDailySaleData.getImageid()).into(viewHolder.mImageViewGoods);
+        Glide.with(context).load(mDailySaleData.getImageid()).into(viewHolder.mImageViewGoods);
         viewHolder.mTextViewName.setText(mDailySaleData.getProductName());
         viewHolder.mTextViewPrice.setText(mDailySaleData.getProductPrice());
 

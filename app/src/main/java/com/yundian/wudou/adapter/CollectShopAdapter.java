@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapteCollectShopData;
@@ -64,7 +65,7 @@ public class CollectShopAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(data.getImgUrl()).into(viewHolder.imageViewShop);
+        Glide.with(context).load(data.getImgUrl()).into(viewHolder.imageViewShop);
         viewHolder.ratingBar.setRating(data.getRatingbar());
         viewHolder.textViewName.setText(data.getShopName());
         viewHolder.textViewInfo.setText("共"+data.getProductcount()+"件商品|月售"+data.getMonthlysales()+"单");

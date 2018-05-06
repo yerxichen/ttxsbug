@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.EvaluateActivity;
@@ -85,7 +86,7 @@ public class MerchantOrderAdapter extends BaseAdapter {
             imageView.setLayoutParams(new ViewGroup.LayoutParams(195, 180));
             imageView.setPadding(0,0,15,0);
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            Picasso.with(context).load(productData.getImageUrl()).into(imageView);
+            Glide.with(context).load(productData.getImageUrl()).into(imageView);
             viewHolder.mLinearLayout.addView(imageView);
         }
 

@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
+import com.bumptech.glide.Glide;
 import com.jwenfeng.library.pulltorefresh.BaseRefreshListener;
 import com.jwenfeng.library.pulltorefresh.PullToRefreshLayout;
 import com.squareup.picasso.Picasso;
@@ -435,7 +436,7 @@ public class ConvenienceServicesActivity extends BaseActivity implements NetWork
 
         @Override
         public void UpdateUI(Context context, int position, String data) {
-            Picasso.with(ConvenienceServicesActivity.this).load(data).into(imageView);
+            Glide.with(ConvenienceServicesActivity.this).load(data).into(imageView);
         }
     }
 

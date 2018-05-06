@@ -14,6 +14,7 @@ import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
+import com.bumptech.glide.Glide;
 import com.jwenfeng.library.pulltorefresh.BaseRefreshListener;
 import com.jwenfeng.library.pulltorefresh.PullToRefreshLayout;
 import com.squareup.picasso.Picasso;
@@ -207,7 +208,7 @@ public class IntegralMallActivity extends BaseActivity implements NetWorkInterfa
 
         @Override
         public void UpdateUI(Context context, int position, AdvertData data) {
-            Picasso.with(IntegralMallActivity.this).load(data.getImageAddress()).into(imageView);
+            Glide.with(IntegralMallActivity.this).load(data.getImageAddress()).into(imageView);
         }
     }
 }

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterStoreDetailsRightData;
@@ -137,7 +138,7 @@ public class TestStoreDetailsRightAdapter extends RecyclerView.Adapter {
             }
         });
 
-        Picasso.with(context).load(data.getProductUrl()).into(((MyViewHolder) holder).mImageViewGoods);
+        Glide.with(context).load(data.getProductUrl()).into(((MyViewHolder) holder).mImageViewGoods);
         ((MyViewHolder) holder).mTextViewName.setText(data.getProductName());
         ((MyViewHolder) holder).mTextViewPrice.setText(data.getProductPrice());
         ((MyViewHolder) holder).mTextViewCount.setText(data.getProductCount());

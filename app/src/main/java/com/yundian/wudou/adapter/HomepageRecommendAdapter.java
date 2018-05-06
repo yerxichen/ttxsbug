@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.activity.CommodityDetailsActivity;
@@ -38,7 +39,7 @@ public class HomepageRecommendAdapter extends RecyclerView.Adapter<HomepageRecom
 
     @Override
     public void onBindViewHolder(RecommendViewHolder holder, int position) {
-        Picasso.with(context).load(mList.get(position).getImgUrl()).into(holder.mImageViewRecommend);
+        Glide.with(context).load(mList.get(position).getImgUrl()).into(holder.mImageViewRecommend);
     }
 
     @Override

@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 import com.yundian.wudou.R;
 import com.yundian.wudou.baseactivity.BaseActivity;
 import com.yundian.wudou.data.FlagData;
@@ -168,7 +168,7 @@ public class ConvenienceServicesDetailsActivity extends BaseActivity implements 
 
         @Override
         public void UpdateUI(Context context, int position, String data) {
-            Picasso.with(ConvenienceServicesDetailsActivity.this).load(data).into(imageView);
+            Glide.with(ConvenienceServicesDetailsActivity.this).load(data).into(imageView);
         }
 
     }

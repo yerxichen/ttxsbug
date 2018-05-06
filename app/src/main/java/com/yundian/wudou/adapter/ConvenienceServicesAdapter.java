@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterConvenienceServicesData;
@@ -65,7 +66,7 @@ public class ConvenienceServicesAdapter extends BaseAdapter{
 
         }
 
-        Picasso.with(context).load(data.getImgUrl()).into(viewHolder.mImageViewGoods);
+        Glide.with(context).load(data.getImgUrl()).into(viewHolder.mImageViewGoods);
         viewHolder.mTextViewGoodsName.setText(data.getGoodsName());
         viewHolder.mTextViewLocation.setText(data.getLocation());
         viewHolder.mTextViewPubdate.setText(data.getPubdate());

@@ -37,7 +37,8 @@ public class OrderManager {
     private MyContextWrapper myContextWrapper;
 
     public OrderManager(Context context) {
-        this.mSQLiteOpenHelper = new OrderSQLiteOpenHelper(myContextWrapper=new MyContextWrapper(context,"run"));
+//        this.mSQLiteOpenHelper = new OrderSQLiteOpenHelper(myContextWrapper=new MyContextWrapper(context,"ttsx"));
+        this.mSQLiteOpenHelper = new OrderSQLiteOpenHelper(context);
         db = mSQLiteOpenHelper.getWritableDatabase();
     }
 

@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterMoreCommentData;
@@ -81,7 +82,7 @@ public class MoreCommentAdapter extends BaseAdapter {
             imageView.setLayoutParams(new ViewGroup.LayoutParams(100, 100));
             imageView.setPadding(0,0,15,0);
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            Picasso.with(context).load(data.getImgUrls().get(i)).into(imageView);
+            Glide.with(context).load(data.getImgUrls().get(i)).into(imageView);
             viewHolder.mLinearLayoutProductImg.addView(imageView);
         }
         return convertView;

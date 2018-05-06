@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.yundian.wudou.R;
 import com.yundian.wudou.data.AdapterSecondHandDivisionData;
@@ -67,7 +68,7 @@ public class SecondHandDivisionAdapter extends BaseAdapter {
               viewHolder = (ViewHolder) convertView.getTag();
           }
 
-        Picasso.with(context).load(data.getImgUrl()).into(viewHolder.mImageViewGoods);
+        Glide.with(context).load(data.getImgUrl()).into(viewHolder.mImageViewGoods);
         viewHolder.mTextViewGoodsName.setText(data.getName());
         viewHolder.mTextViewLocation.setText(data.getRegion());
         viewHolder.mTextViewPubdate.setText(data.getTime());
