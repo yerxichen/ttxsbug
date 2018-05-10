@@ -117,8 +117,8 @@ public class SplashActivity extends Activity implements NetWorkInterface.OnGetIn
 
     @Override
     public void onGetCurrentVersion(JsonBeanCurrentVersion jsonBeanCurrentVersion) {
-        //获取当前版本号，如果等于2.0则不更新，其他情况提示更新
-        if (jsonBeanCurrentVersion.getVersion().equals("2.0")) {
+        //获取当前版本号，如果等于2.2则不更新，其他情况提示更新
+        if (jsonBeanCurrentVersion.getVersion().equals("2.2")) {
             if (!sharedpreferencesManager.getFirstShow()) {
                 netWorkOperate.getInitialToken(model, imei);
             } else {

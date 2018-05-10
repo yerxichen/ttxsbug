@@ -8,8 +8,8 @@ android {
         applicationId "com.yundian.wudou"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 4
-        versionName "2.0"
+        versionCode 6
+        versionName "2.2"
 
         ndk {
             //选择要添加的对应cpu类型的.so库。
