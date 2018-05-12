@@ -187,6 +187,7 @@
             android:name=".activity.RefundActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:launchMode="singleTask"
             android:name=".activity.FragmentContainerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="adjustPan|stateHidden" />
